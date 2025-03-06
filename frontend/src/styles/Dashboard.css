@@ -1,0 +1,91 @@
+/* Reset cơ bản - chỉ cần 1 lần */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Dashboard container */
+.dashboard-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+/* Menu */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 100%;
+  transition: 0.3s;
+  scrollbar-width: none;
+  overflow: hidden scroll;
+  background: rgb(117, 114, 114);
+  -ms-overflow-style: none;
+  padding: 20px 20px 20px 0;
+  backdrop-filter: blur(5px);
+  box-shadow: 8px 0px 9px 0px rgb(177, 16, 136);
+}
+
+.menu::-webkit-scrollbar {
+  display: none;
+}
+
+.menu:hover {
+  width: 260px;
+}
+
+.menu:hover li span:nth-child(2) {
+  display: block;
+}
+
+/* Menu item */
+.menu-content li {
+  list-style: none;
+  border-radius: 0px 50px 50px 0;
+  transition: 0.3s;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.menu-content li a {
+  color: #000; /* Đen */
+  transition: color 0.3s;
+}
+
+/* Hover vào thì nền đen, text trắng */
+.menu-content li:hover {
+  background: #0c0c0c;
+}
+
+.menu-content li:hover a {
+  color: #fff; /* Trắng */
+}
+
+.menu-content li span:nth-child(2) {
+  display: none;
+}
+
+/* Link chung */
+a {
+  text-decoration: none;
+  color: rgb(213, 213, 213);
+  display: flex;
+  align-items: center;
+  font-family: "calibri";
+}
+
+/* Icon wrapper */
+.icon-wrapper {
+  padding: 10px 16px;
+  font-size: 25px;
+  margin-right: 10px;
+  border-radius: 30px;
+  background: #0c0c0c;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
