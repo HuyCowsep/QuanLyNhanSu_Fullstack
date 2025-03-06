@@ -34,5 +34,5 @@ Contributors:
   - Username: HuyCowsep
   - Fullname: Nguyễn Đức Huy
   - position: Team Lead
-  - Email: huyndhe176876@fpt.edu.v
+  - Email: huyndhe176876@fpt.edu.vn
   - Created and Design by: HuyCowsep
