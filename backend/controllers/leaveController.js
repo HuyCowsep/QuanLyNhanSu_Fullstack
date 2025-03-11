@@ -1,22 +1,22 @@
-const { Leave, Employee } = require("../models");
+const { Leave, Employee } = require('../models');
 
-// Lấy danh sách đơn nghỉ phép
+// Admin lấy ALL danh sách đơn nghỉ phép
 const getAllLeaves = async (req, res) => {
   try {
     const leaves = await Leave.find()
       .populate({
-        path: "employeeId",
-        select: "firstName lastName position department",
+        path: 'employeeId',
+        select: 'firstName lastName position department',
         populate: {
-          path: "department",
-          select: "name",
+          path: 'department',
+          select: 'name',
         },
       })
       .sort({ createdAt: -1 });
 
     res.json(leaves);
   } catch (error) {
-    res.status(500).json({ message: "Lỗi server", error: error.message });
+    res.status(500).json({ message: 'Lỗi server', error: error.message });
   }
 };
 
@@ -28,11 +28,11 @@ const getLeaveByEmployee = async (req, res) => {
 
     res.json(leaves);
   } catch (error) {
-    res.status(500).json({ message: "Lỗi server", error: error.message });
+    res.status(500).json({ message: 'Lỗi server', error: error.message });
   }
 };
 
-// Gửi yêu cầu nghỉ phép
+// Nhân viên gửi đơn xin nghỉ phép
 const createLeave = async (req, res) => {
   try {
     const { employeeId, startDate, endDate, reason } = req.body;
@@ -40,7 +40,7 @@ const createLeave = async (req, res) => {
     // Kiểm tra nhân viên có tồn tại không
     const employee = await Employee.findById(employeeId);
     if (!employee) {
-      return res.status(400).json({ message: "Nhân viên không tồn tại" });
+      return res.status(400).json({ message: 'Nhân viên không tồn tại' });
     }
     // Tính số ngày xin nghỉ
     const start = new Date(startDate); //nghỉ từ ngày start
@@ -48,7 +48,7 @@ const createLeave = async (req, res) => {
     const leaveDays = (end - start) / (1000 * 60 * 60 * 24) + 1;
     // Kiểm tra số ngày phép còn lại
     if (leaveDays > employee.leaveDaysPerMonth) {
-      return res.status(400).json({ message: "Bạn không đủ số ngày nghỉ phép" });
+      return res.status(400).json({ message: 'Bạn không đủ số ngày nghỉ phép' });
     }
     // Form nghỉ phép
     const newLeave = new Leave({
@@ -56,13 +56,13 @@ const createLeave = async (req, res) => {
       startDate,
       endDate,
       reason,
-      status: "Chờ duyệt",
+      status: 'Chờ duyệt',
     });
 
     await newLeave.save();
-    res.status(201).json({ message: "Gửi đơn nghỉ phép thành công" });
+    res.status(201).json({ message: 'Gửi đơn nghỉ phép thành công' });
   } catch (error) {
-    res.status(500).json({ message: "Lỗi server", error: error.message });
+    res.status(500).json({ message: 'Lỗi server', error: error.message });
   }
 };
 
@@ -72,16 +72,16 @@ const updateLeaveStatus = async (req, res) => {
     const { id } = req.params;
     const { status } = req.body;
 
-    if (!["Đã duyệt", "Từ chối"].includes(status)) {
-      return res.status(400).json({ message: "Trạng thái không hợp lệ" });
+    if (!['Đã duyệt', 'Từ chối'].includes(status)) {
+      return res.status(400).json({ message: 'Trạng thái không hợp lệ' });
     }
 
     const leave = await Leave.findByIdAndUpdate(id, { status }, { new: true });
-    if (!leave) return res.status(404).json({ message: "Không tìm thấy đơn nghỉ phép" });
+    if (!leave) return res.status(404).json({ message: 'Không tìm thấy đơn nghỉ phép' });
 
-    res.json({ message: "Cập nhật trạng thái thành công", leave });
+    res.json({ message: 'Cập nhật trạng thái thành công', leave });
   } catch (error) {
-    res.status(500).json({ message: "Lỗi server", error: error.message });
+    res.status(500).json({ message: 'Lỗi server', error: error.message });
   }
 };
 
@@ -90,11 +90,11 @@ const deleteLeave = async (req, res) => {
   try {
     const { id } = req.params;
     const leave = await Leave.findByIdAndDelete(id);
-    if (!leave) return res.status(404).json({ message: "Không tìm thấy đơn nghỉ phép" });
+    if (!leave) return res.status(404).json({ message: 'Không tìm thấy đơn nghỉ phép' });
 
-    res.json({ message: "Xóa đơn nghỉ phép thành công" });
+    res.json({ message: 'Xóa đơn nghỉ phép thành công' });
   } catch (error) {
-    res.status(500).json({ message: "Lỗi server", error: error.message });
+    res.status(500).json({ message: 'Lỗi server', error: error.message });
   }
 };
 
@@ -107,12 +107,12 @@ const getRemainingLeaveDays = async (req, res) => {
     // Tìm nhân viên
     const employee = await Employee.findById(employeeId);
     if (!employee) {
-      return res.status(404).json({ message: "Nhân viên không tồn tại" });
+      return res.status(404).json({ message: 'Nhân viên không tồn tại' });
     }
     // Đếm số ngày nghỉ phép đã được duyệt trong tháng hiện tại
     const approvedLeaves = await Leave.find({
       employeeId,
-      status: "Đã duyệt",
+      status: 'Đã duyệt',
       startDate: { $gte: new Date(`${currentYear}-${currentMonth}-01`) },
       endDate: { $lt: new Date(`${currentYear}-${currentMonth + 1}-01`) },
     });
@@ -132,7 +132,7 @@ const getRemainingLeaveDays = async (req, res) => {
       remainingLeaveDays,
     });
   } catch (error) {
-    res.status(500).json({ message: "Lỗi server", error: error.message });
+    res.status(500).json({ message: 'Lỗi server', error: error.message });
   }
 };
 

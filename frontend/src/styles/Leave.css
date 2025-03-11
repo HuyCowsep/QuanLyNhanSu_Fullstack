@@ -1,0 +1,210 @@
+/* 🌟 Tổng quan trang nghỉ phép */
+.leave-page {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgb(241, 235, 235);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* 🔥 Nút Back Home */
+.back-home-container {
+  margin-bottom: 15px;
+  margin: 20px auto;
+}
+.back-home {
+  background: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.back-home:hover {
+  background: #0056b3;
+  text-decoration: underline;
+  color: white;
+}
+
+/* 📌 Tiêu đề */
+.leave-page h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* 📝 Biểu mẫu xin nghỉ phép */
+.leave-page fieldset {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.leave-page legend {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* 🎨 Màu sắc số ngày nghỉ còn lại */
+.leave-remaining {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.leave-remaining.green {
+  color: white;
+  background-color: green;
+}
+
+.leave-remaining.orange {
+  color: white;
+  background-color: orange;
+}
+
+.leave-remaining.red {
+  color: white;
+  background-color: red;
+}
+
+.leave-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.leave-form input,
+.leave-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #6e6e6e;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.leave-form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.leave-page .leave-form button {
+  background: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.leave-page .leave-form button:hover {
+  background: #0056b3;
+  color: white;
+}
+
+/* 📊 Bảng nghỉ phép */
+.leave-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.leave-table th,
+.leave-table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.leave-table th {
+  background: #007bff;
+  color: white;
+}
+
+.leave-table tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+/* 🎨 Màu sắc trạng thái nghỉ phép này bên trang Admin */
+.leave-status {
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.leave-status.chờ-duyệt {
+  color: white;
+  background: orange;
+}
+
+.leave-status.đã-duyệt {
+  color: white;
+  background: green;
+}
+
+.leave-status.từ-chối {
+  color: white;
+  background: red;
+}
+
+/* 🛠️ Nút thao tác này của bên nhân viên*/
+.leave-status.pending {
+  color: white;
+  background: orange;
+}
+
+.leave-status.approved {
+  color: white;
+  background: green;
+}
+
+.leave-status.rejected {
+  color: white;
+  background: red;
+}
+
+/* 🛠️ Nút thao tác */
+.approve-btn,
+.reject-btn,
+.delete-btn {
+  border: none;
+  padding: 6px 12px;
+  margin: 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.approve-btn {
+  background: green;
+  color: white;
+}
+
+.reject-btn {
+  background: orange;
+  color: white;
+}
+
+.delete-btn {
+  background: red;
+  color: white;
+}
+
+.approve-btn:hover {
+  background: darkgreen;
+}
+
+.reject-btn:hover {
+  background: darkorange;
+}
+
+.delete-btn:hover {
+  background: darkred;
+}

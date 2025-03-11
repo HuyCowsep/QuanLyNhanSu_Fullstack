@@ -1,0 +1,146 @@
+/* 🔥 Căn chỉnh toàn bộ trang */
+.admin-department-page {
+  text-align: center;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #eef2f3, #dfe9f3);
+  min-height: 100vh;
+}
+
+/* 🔥 Căn chỉnh lại nút Back Home */
+.back-home-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.back-home {
+  font-size: 16px;
+  color: #007bff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #f0f4f8;
+  padding: 8px 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.back-home:hover {
+  color: #0056b3;
+  background: #d9e2ec;
+  transform: translateX(-3px);
+}
+
+/* 🔍 Thanh tìm kiếm */
+.search-box {
+  width: 60%;
+  padding: 12px;
+  margin: 15px auto;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+  display: block;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.search-box:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+/* 📌 Form thêm phòng ban */
+.add-department {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.add-department input {
+  width: 200px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+}
+
+.add-department button {
+  background: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.add-department button:hover {
+  background: #218838;
+  transform: scale(1.05);
+}
+
+/* 🎨 Thiết kế từng phòng ban */
+.department-card {
+  background: white;
+  padding: 20px;
+  margin: 15px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  max-width: 600px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.department-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.department-card h2 {
+  color: #007bff;
+  margin-bottom: 5px;
+}
+
+.department-card p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* ❌ Nút Xóa phòng ban */
+.delete-btn {
+  background: #dc3545;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease, transform 0.2s;
+  margin-top: 10px;
+}
+
+.delete-btn:hover {
+  background: #c82333;
+  transform: scale(1.05);
+}
+
+select {
+  width: 220px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+  max-height: 300px; /* Giới hạn chiều cao */
+  overflow-y: auto; /* Hiện thanh cuộn nếu nhiều nhân viên */
+}

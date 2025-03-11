@@ -1,0 +1,70 @@
+.department-page {
+  text-align: center;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.search-box {
+  width: 60%;
+  padding: 10px;
+  margin: 15px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.department-card {
+  background: white;
+  padding: 20px;
+  margin: 15px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  max-width: 600px;
+}
+
+.department-card h2 {
+  color: #007bff;
+}
+
+.employee-list {
+  list-style: none;
+  padding: 0;
+}
+
+.employee-list li {
+  background: #f8f9fa;
+  padding: 8px;
+  border-radius: 5px;
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* 🔥 Căn chỉnh lại nút Back Home */
+.back-home-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.back-home {
+  font-size: 16px;
+  color: #007bff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #f0f4f8;
+  padding: 8px 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.back-home:hover {
+  color: #0056b3;
+  background: #d9e2ec;
+  transform: translateX(-3px);
+}

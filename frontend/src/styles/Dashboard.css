@@ -17,7 +17,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 150px;
+  width: 110px;
   height: 100%;
   transition: 0.3s;
   scrollbar-width: none;
@@ -74,7 +74,7 @@ a {
   color: rgb(213, 213, 213);
   display: flex;
   align-items: center;
-  font-family: "calibri";
+  font-family: 'calibri';
 }
 
 /* Icon wrapper */
@@ -88,4 +88,10 @@ a {
   align-items: center;
   justify-content: center;
   color: white;
+}
+
+.dashboard-content {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
