@@ -103,10 +103,8 @@ const updateLeaveStatus = async (req, res) => {
       }
 
       // Cập nhật số ngày nghỉ còn lại của nhân viên
-      console.log('📢 Trước khi cập nhật:', employee.remainingLeaveDays);
       employee.remainingLeaveDays -= leaveDays;
       await employee.save();
-      console.log('✅ Sau khi cập nhật:', employee.remainingLeaveDays);
     }
 
     // Cập nhật trạng thái đơn nghỉ phép
