@@ -14,7 +14,8 @@ const employeeSchema = new mongoose.Schema({
   role: { type: String, enum: ['Trưởng phòng', 'Thành viên'], default: 'Thành viên' },
   hireDate: { type: Date, default: Date.now }, //ngày bắt đầu làm việc
   avatar: { type: String, default: 'default.jpg' },
-  leaveDaysPerMonth: { type: Number, default: 5 }, // mỗi tháng có 5 ngày nghỉ phép
+  leaveDaysPerMonth: { type: Number, default: 5 }, // mỗi tháng có 5 ngày nghỉ phép nhé
+  remainingLeaveDays: { type: Number, default: 5 },
 });
 
 module.exports = mongoose.model('Employee', employeeSchema);

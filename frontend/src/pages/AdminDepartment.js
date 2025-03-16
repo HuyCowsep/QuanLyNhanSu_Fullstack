@@ -68,7 +68,7 @@ const AdminDepartment = () => {
       showCancelButton: true,
       confirmButtonColor: '#d33',
       cancelButtonColor: '#3085d6',
-      confirmButtonText: 'Vâng, xóa đi!',
+      confirmButtonText: 'Xóa ngay!',
       cancelButtonText: 'Hủy',
     });
 

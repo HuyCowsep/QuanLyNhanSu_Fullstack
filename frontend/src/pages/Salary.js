@@ -17,7 +17,7 @@ const Salary = () => {
         const response = await axios.get(`http://localhost:9999/api/payroll/${employeeId}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
-        console.log('🔥 Check data xem là gì:', response.data);
+        console.log('Check data xem là gì:', response.data);
         setSalaries(Array.isArray(response.data) ? response.data : [response.data]);
       } catch (error) {
         console.error('❌ Lỗi khi lấy thông tin lương:', error);

@@ -95,3 +95,102 @@ a {
   justify-content: center;
   align-items: center;
 }
+
+.dashboard-content {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 900px; /* Giới hạn chiều rộng để không bị tràn */
+}
+
+.admin-stats {
+  display: flex;
+  gap: 20px;
+  justify-content: center; /* Căn giữa các card */
+  margin-top: 20px;
+  flex-wrap: wrap; /* Cho phép xuống dòng khi không đủ chỗ */
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  text-align: center;
+  flex-direction: column;
+}
+
+.stat-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.stat-info h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.recent-notifications {
+  text-align: center; /* Căn giữa toàn bộ nội dung */
+  margin: 40px 5px;
+}
+
+.recent-notifications-small {
+  color: red;
+}
+
+.recent-notifications ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  margin: 30px 0px;
+}
+
+.recent-notifications li {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Căn giữa thông báo */
+  margin: 15px 0;
+}
+
+.notif-icon {
+  margin-right: 10px;
+  color: #007bff;
+}
+
+@keyframes shake-blink {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  15% {
+    transform: rotate(-15deg) scale(1.1);
+    opacity: 0.8;
+  }
+  30% {
+    transform: rotate(15deg) scale(1.05);
+    opacity: 0.9;
+  }
+  45% {
+    transform: rotate(-10deg) scale(1);
+    opacity: 1;
+  }
+  60% {
+    transform: rotate(10deg) scale(1.1);
+    opacity: 0.8;
+  }
+  75% {
+    transform: rotate(-5deg) scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+.shake-blink-bell {
+  display: inline-block;
+  animation: shake-blink 1s infinite;
+}

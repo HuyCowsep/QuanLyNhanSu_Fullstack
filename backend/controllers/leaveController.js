@@ -66,7 +66,7 @@ const createLeave = async (req, res) => {
   }
 };
 
-// Cập nhật trạng thái đơn nghỉ phép (Duyệt hoặc từ chối)
+// Cập nhật trạng thái đơn nghỉ phép (Duyệt hoặc từ chối) và trừ số ngày phép còn lại
 const updateLeaveStatus = async (req, res) => {
   try {
     const { id } = req.params;
@@ -76,11 +76,46 @@ const updateLeaveStatus = async (req, res) => {
       return res.status(400).json({ message: 'Trạng thái không hợp lệ' });
     }
 
-    const leave = await Leave.findByIdAndUpdate(id, { status }, { new: true });
-    if (!leave) return res.status(404).json({ message: 'Không tìm thấy đơn nghỉ phép' });
+    const leave = await Leave.findById(id);
+    if (!leave) {
+      return res.status(404).json({ message: 'Không tìm thấy đơn nghỉ phép' });
+    }
+
+    if (leave.status === 'Đã duyệt') {
+      return res.status(400).json({ message: 'Đơn nghỉ phép này đã được duyệt trước đó' });
+    }
+
+    // Nếu duyệt đơn nghỉ phép, trừ số ngày nghỉ còn lại của nhân viên
+    if (status === 'Đã duyệt') {
+      const employee = await Employee.findById(leave.employeeId);
+      if (!employee) {
+        return res.status(404).json({ message: 'Không tìm thấy nhân viên' });
+      }
+
+      // Tính số ngày nghỉ của đơn này
+      const startDate = new Date(leave.startDate);
+      const endDate = new Date(leave.endDate);
+      const leaveDays = (endDate - startDate) / (1000 * 60 * 60 * 24) + 1;
+
+      // Kiểm tra nếu nhân viên có đủ số ngày phép
+      if (employee.remainingLeaveDays < leaveDays) {
+        return res.status(400).json({ message: 'Nhân viên không đủ số ngày phép' });
+      }
+
+      // Cập nhật số ngày nghỉ còn lại của nhân viên
+      console.log('📢 Trước khi cập nhật:', employee.remainingLeaveDays);
+      employee.remainingLeaveDays -= leaveDays;
+      await employee.save();
+      console.log('✅ Sau khi cập nhật:', employee.remainingLeaveDays);
+    }
+
+    // Cập nhật trạng thái đơn nghỉ phép
+    leave.status = status;
+    await leave.save();
 
     res.json({ message: 'Cập nhật trạng thái thành công', leave });
   } catch (error) {
+    console.error('❌ Lỗi khi cập nhật đơn nghỉ phép:', error);
     res.status(500).json({ message: 'Lỗi server', error: error.message });
   }
 };
@@ -102,29 +137,38 @@ const deleteLeave = async (req, res) => {
 const getRemainingLeaveDays = async (req, res) => {
   try {
     const { employeeId } = req.params;
-    const currentMonth = new Date().getMonth() + 1; // Lấy tháng hiện tại (1-12)
-    const currentYear = new Date().getFullYear(); // Lấy năm hiện tại
+    const today = new Date();
+    const currentMonth = today.getMonth() + 1;
+    const currentYear = today.getFullYear();
+
     // Tìm nhân viên
     const employee = await Employee.findById(employeeId);
     if (!employee) {
       return res.status(404).json({ message: 'Nhân viên không tồn tại' });
     }
-    // Đếm số ngày nghỉ phép đã được duyệt trong tháng hiện tại
+
+    // Tìm tất cả các đơn nghỉ phép được duyệt của nhân viên
     const approvedLeaves = await Leave.find({
       employeeId,
       status: 'Đã duyệt',
-      startDate: { $gte: new Date(`${currentYear}-${currentMonth}-01`) },
-      endDate: { $lt: new Date(`${currentYear}-${currentMonth + 1}-01`) },
     });
-    // Tính tổng số ngày nghỉ đã dùng
+
     let usedLeaveDays = 0;
+
+    // Tính tổng số ngày nghỉ đã dùng
     approvedLeaves.forEach((leave) => {
       const start = new Date(leave.startDate);
       const end = new Date(leave.endDate);
-      usedLeaveDays += (end - start) / (1000 * 60 * 60 * 24) + 1; // Tính số ngày nghỉ
+
+      // Kiểm tra xem đơn nghỉ có thuộc tháng hiện tại không
+      if ((start.getMonth() + 1 === currentMonth && start.getFullYear() === currentYear) || (end.getMonth() + 1 === currentMonth && end.getFullYear() === currentYear)) {
+        usedLeaveDays += (end - start) / (1000 * 60 * 60 * 24) + 1;
+      }
     });
+
     // Tính số ngày phép còn lại
     const remainingLeaveDays = Math.max(0, employee.leaveDaysPerMonth - usedLeaveDays);
+
     res.json({
       employee: `${employee.firstName} ${employee.lastName}`,
       leaveDaysPerMonth: employee.leaveDaysPerMonth,
