@@ -111,7 +111,7 @@ const updateLeaveStatus = async (req, res) => {
     leave.status = status;
     await leave.save();
 
-    res.json({ message: 'Cập nhật trạng thái thành công', leave });
+    res.json({ message: `Cập nhật trạng thái thành công: ${status}`, leave });
   } catch (error) {
     console.error('❌ Lỗi khi cập nhật đơn nghỉ phép:', error);
     res.status(500).json({ message: 'Lỗi server', error: error.message });

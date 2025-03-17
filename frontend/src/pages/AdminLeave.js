@@ -34,7 +34,7 @@ const AdminLeave = () => {
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Có, cập nhật!',
+      confirmButtonText: 'Cập nhật!',
       cancelButtonText: 'Hủy',
     });
 
@@ -126,7 +126,7 @@ const AdminLeave = () => {
                     <button className="approve-btn" onClick={() => handleUpdateStatus(leave._id, 'Đã duyệt')}>
                       ✔ Duyệt
                     </button>
-                    <button className="reject-btn" onClick={() => handleUpdateStatus(leave._id, 'Đã từ chối')}>
+                    <button className="reject-btn" onClick={() => handleUpdateStatus(leave._id, 'Từ chối')}>
                       ✖ Từ chối
                     </button>
                   </>
