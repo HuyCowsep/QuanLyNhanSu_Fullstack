@@ -184,4 +184,327 @@
     "$date": "2025-03-11T01:28:58.925Z"
   },
   "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67da2caaebe0c5f130ae1e13"
+  },
+  "userId": {
+    "$oid": "67c5efa374508bb1ba4d7942"
+  },
+  "action": "Cập nhật lương nhân viên",
+  "targetModel": "Employee",
+  "targetId": {
+    "$oid": "67ca5dca56cebef000ffbc26"
+  },
+  "timestamp": {
+    "$date": "2025-03-19T02:32:10.914Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67da2cb2ebe0c5f130ae1e17"
+  },
+  "userId": {
+    "$oid": "67c5efa374508bb1ba4d7942"
+  },
+  "action": "Cập nhật lương nhân viên",
+  "targetModel": "Employee",
+  "targetId": {
+    "$oid": "67ca5dca56cebef000ffbc26"
+  },
+  "timestamp": {
+    "$date": "2025-03-19T02:32:18.579Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67da2d6b9f0448ddca87272f"
+  },
+  "userId": {
+    "$oid": "67c5efa374508bb1ba4d7942"
+  },
+  "action": "Cập nhật lương nhân viên",
+  "targetModel": "Employee",
+  "targetId": {
+    "$oid": "67ca5dca56cebef000ffbc26"
+  },
+  "timestamp": {
+    "$date": "2025-03-19T02:35:23.636Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67da2dc99f0448ddca872790"
+  },
+  "userId": {
+    "$oid": "67c5efa374508bb1ba4d7942"
+  },
+  "action": "Cập nhật lương nhân viên",
+  "targetModel": "Employee",
+  "targetId": {
+    "$oid": "67ca5dca56cebef000ffbc26"
+  },
+  "timestamp": {
+    "$date": "2025-03-19T02:36:57.708Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67da2dd59f0448ddca872795"
+  },
+  "userId": {
+    "$oid": "67c5efa374508bb1ba4d7942"
+  },
+  "action": "Cập nhật lương nhân viên",
+  "targetModel": "Employee",
+  "targetId": {
+    "$oid": "67c9dea9c11538941f5f3aa9"
+  },
+  "timestamp": {
+    "$date": "2025-03-19T02:37:09.764Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dacd310d5fbc16de233d8f"
+  },
+  "userId": {
+    "$oid": "67c5efa374508bb1ba4d7942"
+  },
+  "action": "Cập nhật lương nhân viên",
+  "targetModel": "Employee",
+  "targetId": {
+    "$oid": "67ca5dca56cebef000ffbc26"
+  },
+  "timestamp": {
+    "$date": "2025-03-19T13:57:05.996Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dace6aa4a23b41e125f407"
+  },
+  "userId": {
+    "$oid": "67c5efa374508bb1ba4d7942"
+  },
+  "action": "Cập nhật lương nhân viên",
+  "targetModel": "Employee",
+  "targetId": {
+    "$oid": "67ca5dca56cebef000ffbc26"
+  },
+  "timestamp": {
+    "$date": "2025-03-19T14:02:18.323Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dace7da4a23b41e125f40c"
+  },
+  "userId": {
+    "$oid": "67c5efa374508bb1ba4d7942"
+  },
+  "action": "Cập nhật lương nhân viên",
+  "targetModel": "Employee",
+  "targetId": {
+    "$oid": "67c9dea9c11538941f5f3aa9"
+  },
+  "timestamp": {
+    "$date": "2025-03-19T14:02:37.613Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dad037a4a23b41e125f46f"
+  },
+  "userId": {
+    "$oid": "67c5efa374508bb1ba4d7942"
+  },
+  "action": "Cập nhật lương nhân viên",
+  "targetModel": "Employee",
+  "targetId": {
+    "$oid": "67ca5dca56cebef000ffbc26"
+  },
+  "timestamp": {
+    "$date": "2025-03-19T14:09:59.243Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dad04ba4a23b41e125f4a2"
+  },
+  "userId": {
+    "$oid": "67c5efa374508bb1ba4d7942"
+  },
+  "action": "Cập nhật lương nhân viên",
+  "targetModel": "Employee",
+  "targetId": {
+    "$oid": "67ca5dca56cebef000ffbc26"
+  },
+  "timestamp": {
+    "$date": "2025-03-19T14:10:19.083Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dad055a4a23b41e125f4a7"
+  },
+  "userId": {
+    "$oid": "67c5efa374508bb1ba4d7942"
+  },
+  "action": "Cập nhật lương nhân viên",
+  "targetModel": "Employee",
+  "targetId": {
+    "$oid": "67ca5dca56cebef000ffbc26"
+  },
+  "timestamp": {
+    "$date": "2025-03-19T14:10:29.798Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67daf1f1fcd3e0452a6fb91f"
+  },
+  "userId": {
+    "$oid": "67c5efa374508bb1ba4d7942"
+  },
+  "action": "Cập nhật lương nhân viên",
+  "targetModel": "Employee",
+  "targetId": {
+    "$oid": "67c72f6e716fbe27b6028efa"
+  },
+  "timestamp": {
+    "$date": "2025-03-19T16:33:53.145Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67daf367fcd3e0452a6fbcf3"
+  },
+  "userId": {
+    "$oid": "67c5efa374508bb1ba4d7942"
+  },
+  "action": "Cập nhật lương nhân viên",
+  "targetModel": "Employee",
+  "targetId": {
+    "$oid": "67c7ad8ffde9318e3ce757f6"
+  },
+  "timestamp": {
+    "$date": "2025-03-19T16:40:07.809Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67daf38bfcd3e0452a6fbcf8"
+  },
+  "userId": {
+    "$oid": "67c5efa374508bb1ba4d7942"
+  },
+  "action": "Cập nhật lương nhân viên",
+  "targetModel": "Employee",
+  "targetId": {
+    "$oid": "67c72f2d716fbe27b6028ef6"
+  },
+  "timestamp": {
+    "$date": "2025-03-19T16:40:43.986Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67daf396fcd3e0452a6fbcfd"
+  },
+  "userId": {
+    "$oid": "67c5efa374508bb1ba4d7942"
+  },
+  "action": "Cập nhật lương nhân viên",
+  "targetModel": "Employee",
+  "targetId": {
+    "$oid": "67c7ac73fde9318e3ce757e4"
+  },
+  "timestamp": {
+    "$date": "2025-03-19T16:40:54.812Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67daf3abfcd3e0452a6fbd02"
+  },
+  "userId": {
+    "$oid": "67c5efa374508bb1ba4d7942"
+  },
+  "action": "Cập nhật lương nhân viên",
+  "targetModel": "Employee",
+  "targetId": {
+    "$oid": "67c7ae36fde9318e3ce7580f"
+  },
+  "timestamp": {
+    "$date": "2025-03-19T16:41:15.721Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67daf547fcd3e0452a6fbff3"
+  },
+  "userId": {
+    "$oid": "67daf4a4fcd3e0452a6fbf63"
+  },
+  "action": "Cập nhật nhân viên",
+  "targetModel": "Employee",
+  "targetId": {
+    "$oid": "67daf4a4fcd3e0452a6fbf65"
+  },
+  "timestamp": {
+    "$date": "2025-03-19T16:48:07.819Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67daf5b8fcd3e0452a6fc1d7"
+  },
+  "userId": {
+    "$oid": "67c5efa374508bb1ba4d7942"
+  },
+  "action": "Cập nhật lương nhân viên",
+  "targetModel": "Employee",
+  "targetId": {
+    "$oid": "67daf4a4fcd3e0452a6fbf65"
+  },
+  "timestamp": {
+    "$date": "2025-03-19T16:50:00.412Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67daf627fcd3e0452a6fc34b"
+  },
+  "userId": {
+    "$oid": "67daf4a4fcd3e0452a6fbf63"
+  },
+  "action": "Cập nhật nhân viên",
+  "targetModel": "Employee",
+  "targetId": {
+    "$oid": "67daf4a4fcd3e0452a6fbf65"
+  },
+  "timestamp": {
+    "$date": "2025-03-19T16:51:51.098Z"
+  },
+  "__v": 0
 }]

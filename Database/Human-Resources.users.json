@@ -221,4 +221,16 @@
     "$oid": "67c860e3d64ddb6b6d2275f2"
   },
   "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67daf4a4fcd3e0452a6fbf63"
+  },
+  "email": "huy@gmaiil.com",
+  "password": "123456",
+  "role": "employee",
+  "employeeId": {
+    "$oid": "67daf4a4fcd3e0452a6fbf65"
+  },
+  "__v": 0
 }]

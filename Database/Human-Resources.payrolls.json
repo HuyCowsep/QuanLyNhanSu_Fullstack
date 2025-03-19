@@ -5,12 +5,12 @@
   "employeeId": {
     "$oid": "67c72702bea745e2f28efb10"
   },
-  "baseSalary": 120000000,
+  "baseSalary": 12000000,
   "bonus": 20000000,
   "deductions": 505000,
-  "total": 139495000,
+  "total": 31495000,
   "paymentDate": {
-    "$date": "2025-03-04T18:02:38.909Z"
+    "$date": "2025-03-04T17:00:00.000Z"
   },
   "__v": 0
 },
@@ -55,10 +55,10 @@
   },
   "baseSalary": 20000000,
   "bonus": 10000000,
-  "deductions": 0,
-  "total": 30000000,
+  "deductions": 230000,
+  "total": 29770000,
   "paymentDate": {
-    "$date": "2025-03-10T17:38:56.254Z"
+    "$date": "2025-03-11T00:00:00.000Z"
   },
   "__v": 0
 },
@@ -101,12 +101,12 @@
   "employeeId": {
     "$oid": "67c7b079fde9318e3ce75820"
   },
-  "baseSalary": 12345600,
+  "baseSalary": 12500000,
   "bonus": 2211300,
   "deductions": 2314012,
-  "total": 12242888,
+  "total": 12397288,
   "paymentDate": {
-    "$date": "2023-11-11T17:00:00.000Z"
+    "$date": "2024-11-12T00:00:00.000Z"
   },
   "__v": 0
 },
@@ -133,10 +133,10 @@
   "employeeId": {
     "$oid": "67c72702bea745e2f28efb10"
   },
-  "baseSalary": 12070000,
+  "baseSalary": 12000000,
   "bonus": 2003000,
   "deductions": 100000,
-  "total": 13973000,
+  "total": 13903000,
   "paymentDate": {
     "$date": "2025-03-08T17:00:00.000Z"
   },
@@ -149,12 +149,44 @@
   "employeeId": {
     "$oid": "67c72702bea745e2f28efb10"
   },
-  "baseSalary": 1231231231,
-  "bonus": 45561235,
-  "deductions": 2214123,
-  "total": 1274578343,
+  "baseSalary": 12000000,
+  "bonus": 333333,
+  "deductions": 10000,
+  "total": 12323333,
   "paymentDate": {
-    "$date": "2025-03-11T17:00:00.000Z"
+    "$date": "2025-03-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67dad4e285fc7f0666bca8a9"
+  },
+  "employeeId": {
+    "$oid": "67c7adb1fde9318e3ce75802"
+  },
+  "baseSalary": 11000000,
+  "bonus": 2222222,
+  "deductions": 555000,
+  "total": 12667222,
+  "paymentDate": {
+    "$date": "2025-03-19T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67daf5cdfcd3e0452a6fc20c"
+  },
+  "employeeId": {
+    "$oid": "67daf4a4fcd3e0452a6fbf65"
+  },
+  "baseSalary": 9000000,
+  "bonus": 500000,
+  "deductions": 0,
+  "total": 9500000,
+  "paymentDate": {
+    "$date": "2025-03-19T00:00:00.000Z"
   },
   "__v": 0
 }]

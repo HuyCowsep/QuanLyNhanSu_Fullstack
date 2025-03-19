@@ -38,7 +38,7 @@
     "$oid": "67c72871778523d0435cc231"
   },
   "position": "Lập trình FrontEnd",
-  "salary": 14500000,
+  "salary": 17000000,
   "role": "Thành viên",
   "hireDate": {
     "$date": "2025-03-04T16:49:49.155Z"
@@ -63,7 +63,7 @@
     "$oid": "67c72871778523d0435cc231"
   },
   "position": "Tester",
-  "salary": 10500000,
+  "salary": 11000000,
   "role": "Thành viên",
   "hireDate": {
     "$date": "2025-03-04T16:50:54.991Z"
@@ -88,7 +88,7 @@
     "$oid": "67c7386ab9e4506e85c85de9"
   },
   "position": "Sale",
-  "salary": 11300000,
+  "salary": 8000000,
   "role": "Thành viên",
   "hireDate": {
     "$date": "2025-03-05T01:44:19.300Z"
@@ -113,7 +113,7 @@
     "$oid": "67c7386ab9e4506e85c85de9"
   },
   "position": "Content Creator",
-  "salary": 12500000,
+  "salary": 12000000,
   "role": "Thành viên",
   "hireDate": {
     "$date": "2025-03-05T01:49:03.468Z"
@@ -238,7 +238,7 @@
     "$oid": "67c7386ab9e4506e85c85de9"
   },
   "position": "Marketing Analyst",
-  "salary": 15200000,
+  "salary": 20000000,
   "role": "Trưởng phòng",
   "hireDate": {
     "$date": "2025-03-05T01:51:50.397Z"
@@ -417,7 +417,7 @@
     "$oid": "67c73770b9e4506e85c85de1"
   },
   "position": "Nhân viên tuyển dụng",
-  "salary": 12000000,
+  "salary": 10000000,
   "role": "Thành viên",
   "hireDate": {
     "$date": "2025-03-06T17:43:05.452Z"
@@ -442,7 +442,7 @@
     "$oid": "67c72871778523d0435cc231"
   },
   "position": "Lập trình .Net",
-  "salary": 0,
+  "salary": 11500000,
   "role": "Thành viên",
   "hireDate": {
     "$date": "2025-03-07T02:45:30.592Z"
@@ -451,4 +451,29 @@
   "leaveDaysPerMonth": 5,
   "__v": 0,
   "remainingLeaveDays": 1
+},
+{
+  "_id": {
+    "$oid": "67daf4a4fcd3e0452a6fbf65"
+  },
+  "firstName": "Huy",
+  "lastName": "Faker",
+  "dateOfBirth": "2003-03-31",
+  "gender": "Nam",
+  "address": "Thôn 2, thạch hoà, thạch thất, Hà Nội",
+  "email": "huy@gmaiil.com",
+  "phone": "0912202885",
+  "department": {
+    "$oid": "67c73770b9e4506e85c85de1"
+  },
+  "position": "Nhân viên Kinh Doanh",
+  "salary": 9000000,
+  "role": "Thành viên",
+  "hireDate": {
+    "$date": "2025-03-19T16:45:24.753Z"
+  },
+  "avatar": "/uploads/avatar-1742403104390-105745331.png",
+  "leaveDaysPerMonth": 5,
+  "remainingLeaveDays": 5,
+  "__v": 0
 }]
