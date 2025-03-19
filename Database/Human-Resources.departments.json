@@ -1,0 +1,42 @@
+[{
+  "_id": {
+    "$oid": "67c72871778523d0435cc231"
+  },
+  "name": "Phòng Công Nghệ Thông Tin",
+  "description": "Quản lý hệ thống công nghệ và phát triển phần mềm",
+  "managerId": {
+    "$oid": "67c72702bea745e2f28efb10"
+  },
+  "createdAt": {
+    "$date": "2025-03-04T16:21:05.899Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c73770b9e4506e85c85de1"
+  },
+  "name": "Phòng Nhân Sự",
+  "description": "Quản lý nhân viên và tuyển dụng",
+  "managerId": {
+    "$oid": "67c7b079fde9318e3ce75820"
+  },
+  "createdAt": {
+    "$date": "2025-03-04T17:25:04.542Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c7386ab9e4506e85c85de9"
+  },
+  "name": "Phòng Marketing",
+  "description": "Quản lý thương hiệu, phát triển nội dung, quảng cáo và chiến lược tiếp thị",
+  "managerId": {
+    "$oid": "67c7ae36fde9318e3ce7580f"
+  },
+  "createdAt": {
+    "$date": "2025-03-04T17:29:14.748Z"
+  },
+  "__v": 0
+}]

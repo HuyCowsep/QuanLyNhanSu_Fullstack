@@ -1,0 +1,187 @@
+[{
+  "_id": {
+    "$oid": "67c9e264fc937a74576d274d"
+  },
+  "userId": {
+    "$oid": "67c9dea9c11538941f5f3aa7"
+  },
+  "action": "Cập nhật nhân viên",
+  "targetModel": "Employee",
+  "targetId": {
+    "$oid": "67c9dea9c11538941f5f3aa9"
+  },
+  "timestamp": {
+    "$date": "2025-03-06T17:59:00.714Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ca4fbf5e20dc8ab1955799"
+  },
+  "userId": {
+    "$oid": "67ca4f3a5e20dc8ab1955790"
+  },
+  "action": "Cập nhật nhân viên",
+  "targetModel": "Employee",
+  "targetId": {
+    "$oid": "67ca4f3a5e20dc8ab1955792"
+  },
+  "timestamp": {
+    "$date": "2025-03-07T01:45:35.626Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ca532a5e20dc8ab19557bd"
+  },
+  "userId": {
+    "$oid": "67ca4f3a5e20dc8ab1955790"
+  },
+  "action": "Cập nhật nhân viên",
+  "targetModel": "Employee",
+  "targetId": {
+    "$oid": "67ca4f3a5e20dc8ab1955792"
+  },
+  "timestamp": {
+    "$date": "2025-03-07T02:00:10.046Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ca56bd56cebef000ffbbd2"
+  },
+  "userId": {
+    "$oid": "67ca4f3a5e20dc8ab1955790"
+  },
+  "action": "Cập nhật nhân viên",
+  "targetModel": "Employee",
+  "targetId": {
+    "$oid": "67ca4f3a5e20dc8ab1955792"
+  },
+  "timestamp": {
+    "$date": "2025-03-07T02:15:25.824Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ca5b2256cebef000ffbbfe"
+  },
+  "userId": {
+    "$oid": "67ca4f3a5e20dc8ab1955790"
+  },
+  "action": "Cập nhật nhân viên",
+  "targetModel": "Employee",
+  "targetId": {
+    "$oid": "67ca4f3a5e20dc8ab1955792"
+  },
+  "timestamp": {
+    "$date": "2025-03-07T02:34:10.130Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ca5f0a56cebef000ffbc35"
+  },
+  "userId": {
+    "$oid": "67ca5dca56cebef000ffbc24"
+  },
+  "action": "Cập nhật nhân viên",
+  "targetModel": "Employee",
+  "targetId": {
+    "$oid": "67ca5dca56cebef000ffbc26"
+  },
+  "timestamp": {
+    "$date": "2025-03-07T02:50:50.897Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ca627856cebef000ffbc6b"
+  },
+  "userId": {
+    "$oid": "67ca5dca56cebef000ffbc24"
+  },
+  "action": "Cập nhật nhân viên",
+  "targetModel": "Employee",
+  "targetId": {
+    "$oid": "67ca5dca56cebef000ffbc26"
+  },
+  "timestamp": {
+    "$date": "2025-03-07T03:05:28.673Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb01a47f72ce8678b7003a"
+  },
+  "userId": {
+    "$oid": "67ca5dca56cebef000ffbc24"
+  },
+  "action": "Cập nhật nhân viên",
+  "targetModel": "Employee",
+  "targetId": {
+    "$oid": "67ca5dca56cebef000ffbc26"
+  },
+  "timestamp": {
+    "$date": "2025-03-07T14:24:36.779Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ccb1809653a88173a2efbb"
+  },
+  "userId": {
+    "$oid": "67ca5dca56cebef000ffbc24"
+  },
+  "action": "Cập nhật nhân viên",
+  "targetModel": "Employee",
+  "targetId": {
+    "$oid": "67ca5dca56cebef000ffbc26"
+  },
+  "timestamp": {
+    "$date": "2025-03-08T21:07:12.463Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cf8afeee38e899421252f0"
+  },
+  "userId": {
+    "$oid": "67cb36abd04fdb71fcff3d8a"
+  },
+  "action": "Cập nhật nhân viên",
+  "targetModel": "Employee",
+  "targetId": {
+    "$oid": "67c72702bea745e2f28efb10"
+  },
+  "timestamp": {
+    "$date": "2025-03-11T00:59:42.779Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cf91daee38e8994212542f"
+  },
+  "userId": {
+    "$oid": "67cb36abd04fdb71fcff3d8a"
+  },
+  "action": "Cập nhật nhân viên",
+  "targetModel": "Employee",
+  "targetId": {
+    "$oid": "67c72702bea745e2f28efb10"
+  },
+  "timestamp": {
+    "$date": "2025-03-11T01:28:58.925Z"
+  },
+  "__v": 0
+}]

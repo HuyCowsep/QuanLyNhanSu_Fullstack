@@ -1,0 +1,160 @@
+[{
+  "_id": {
+    "$oid": "67c7403ed6ba718dbac41917"
+  },
+  "employeeId": {
+    "$oid": "67c72702bea745e2f28efb10"
+  },
+  "baseSalary": 120000000,
+  "bonus": 20000000,
+  "deductions": 505000,
+  "total": 139495000,
+  "paymentDate": {
+    "$date": "2025-03-04T18:02:38.909Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cf219b5bea4cadb8025c7a"
+  },
+  "employeeId": {
+    "$oid": "67c72f2d716fbe27b6028ef6"
+  },
+  "baseSalary": 17000000,
+  "bonus": 5000000,
+  "deductions": 150000,
+  "total": 21850000,
+  "paymentDate": {
+    "$date": "2025-03-10T17:30:03.771Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cf23445bea4cadb8025d39"
+  },
+  "employeeId": {
+    "$oid": "67c72f6e716fbe27b6028efa"
+  },
+  "baseSalary": 11000000,
+  "bonus": 3500000,
+  "deductions": 1000000,
+  "total": 13500000,
+  "paymentDate": {
+    "$date": "2025-03-10T17:37:08.613Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cf23b086e4dbcad39ba619"
+  },
+  "employeeId": {
+    "$oid": "67c7ae36fde9318e3ce7580f"
+  },
+  "baseSalary": 20000000,
+  "bonus": 10000000,
+  "deductions": 0,
+  "total": 30000000,
+  "paymentDate": {
+    "$date": "2025-03-10T17:38:56.254Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cf254f938b8dbe52955ce0"
+  },
+  "employeeId": {
+    "$oid": "67c7ac73fde9318e3ce757e4"
+  },
+  "baseSalary": 8000000,
+  "bonus": 1500000,
+  "deductions": 200000,
+  "total": 9300000,
+  "paymentDate": {
+    "$date": "2025-03-10T17:45:51.543Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cf279a938b8dbe52955d6d"
+  },
+  "employeeId": {
+    "$oid": "67c7ad8ffde9318e3ce757f6"
+  },
+  "baseSalary": 12000000,
+  "bonus": 120000,
+  "deductions": 120000,
+  "total": 12000000,
+  "paymentDate": {
+    "$date": "2024-03-30T17:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cf2c2d938b8dbe52955f81"
+  },
+  "employeeId": {
+    "$oid": "67c7b079fde9318e3ce75820"
+  },
+  "baseSalary": 12345600,
+  "bonus": 2211300,
+  "deductions": 2314012,
+  "total": 12242888,
+  "paymentDate": {
+    "$date": "2023-11-11T17:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cf2c94938b8dbe52955fb2"
+  },
+  "employeeId": {
+    "$oid": "67c72702bea745e2f28efb10"
+  },
+  "baseSalary": 12000000,
+  "bonus": 5000000,
+  "deductions": 100333,
+  "total": 16899667,
+  "paymentDate": {
+    "$date": "2025-03-09T17:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cf324d9b23c14903caa258"
+  },
+  "employeeId": {
+    "$oid": "67c72702bea745e2f28efb10"
+  },
+  "baseSalary": 12070000,
+  "bonus": 2003000,
+  "deductions": 100000,
+  "total": 13973000,
+  "paymentDate": {
+    "$date": "2025-03-08T17:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cf32629b23c14903caa2b7"
+  },
+  "employeeId": {
+    "$oid": "67c72702bea745e2f28efb10"
+  },
+  "baseSalary": 1231231231,
+  "bonus": 45561235,
+  "deductions": 2214123,
+  "total": 1274578343,
+  "paymentDate": {
+    "$date": "2025-03-11T17:00:00.000Z"
+  },
+  "__v": 0
+}]

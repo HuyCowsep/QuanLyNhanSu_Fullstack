@@ -1,0 +1,296 @@
+[{
+  "_id": {
+    "$oid": "67c7a51b475334329ffa9b92"
+  },
+  "employeeId": {
+    "$oid": "67c72702bea745e2f28efb10"
+  },
+  "date": {
+    "$date": "2025-03-05T00:00:00.000Z"
+  },
+  "checkInTime": "08:00",
+  "checkOutTime": "17:00",
+  "status": "Đi làm",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c7a6b2385534708bd48d79"
+  },
+  "employeeId": {
+    "$oid": "67c72f6e716fbe27b6028efa"
+  },
+  "date": {
+    "$date": "2025-03-05T00:00:00.000Z"
+  },
+  "checkInTime": "08:30",
+  "checkOutTime": "17:00",
+  "status": "Đi làm muộn",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c7a7a6adebfea63bcf4592"
+  },
+  "employeeId": {
+    "$oid": "67c72f2d716fbe27b6028ef6"
+  },
+  "date": {
+    "$date": "2025-03-05T00:00:00.000Z"
+  },
+  "checkInTime": "08:23",
+  "status": "Đi làm muộn",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb2b8e325d3580f214d747"
+  },
+  "employeeId": {
+    "$oid": "67ca5dca56cebef000ffbc26"
+  },
+  "date": {
+    "$date": "2025-03-07T00:00:00.000Z"
+  },
+  "checkInTime": "00:23",
+  "status": "Đi làm",
+  "__v": 0,
+  "checkOutTime": "00:24"
+},
+{
+  "_id": {
+    "$oid": "67cc9181d2da7680a9f9d2ba"
+  },
+  "employeeId": {
+    "$oid": "67ca5dca56cebef000ffbc26"
+  },
+  "date": {
+    "$date": "2025-03-08T00:00:00.000Z"
+  },
+  "checkInTime": "01:50",
+  "status": "Đi làm",
+  "__v": 0,
+  "checkOutTime": "02:54"
+},
+{
+  "_id": {
+    "$oid": "67cc988312f904d4c1a021bc"
+  },
+  "employeeId": {
+    "$oid": "67c72702bea745e2f28efb10"
+  },
+  "date": {
+    "$date": "2025-03-08T00:00:00.000Z"
+  },
+  "checkInTime": "02:20",
+  "status": "Đi làm",
+  "__v": 0,
+  "checkOutTime": "18:16"
+},
+{
+  "_id": {
+    "$oid": "67cd28faf7684fed88b4dff9"
+  },
+  "employeeId": {
+    "$oid": "67ca5dca56cebef000ffbc26"
+  },
+  "date": {
+    "$date": "2025-03-09T00:00:00.000Z"
+  },
+  "checkInTime": "12:36",
+  "status": "Đi làm muộn",
+  "__v": 0,
+  "checkOutTime": "12:37"
+},
+{
+  "_id": {
+    "$oid": "67cd2ea3f6f9703798e68c2c"
+  },
+  "employeeId": {
+    "$oid": "67c7b092fde9318e3ce7582c"
+  },
+  "date": {
+    "$date": "2025-03-09T00:00:00.000Z"
+  },
+  "checkInTime": "13:01",
+  "status": "Đi làm muộn",
+  "__v": 0,
+  "checkOutTime": "13:05"
+},
+{
+  "_id": {
+    "$oid": "67cd2fc9f6f9703798e68c3e"
+  },
+  "employeeId": {
+    "$oid": "67c7b08cfde9318e3ce75828"
+  },
+  "date": {
+    "$date": "2025-03-09T00:00:00.000Z"
+  },
+  "checkInTime": "13:06",
+  "status": "Đi làm muộn",
+  "__v": 0,
+  "checkOutTime": "13:10:32"
+},
+{
+  "_id": {
+    "$oid": "67cd30fb38ab1e182a58983c"
+  },
+  "employeeId": {
+    "$oid": "67c9dea9c11538941f5f3aa9"
+  },
+  "date": {
+    "$date": "2025-03-09T00:00:00.000Z"
+  },
+  "checkInTime": "13:11:07",
+  "status": "Đi làm",
+  "__v": 0,
+  "checkOutTime": "18:08"
+},
+{
+  "_id": {
+    "$oid": "67cd313ed9ebbb29e04facca"
+  },
+  "employeeId": {
+    "$oid": "67c7ad9dfde9318e3ce757fa"
+  },
+  "date": {
+    "$date": "2025-03-09T00:00:00.000Z"
+  },
+  "checkInTime": "13:12",
+  "status": "Đi làm muộn",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cd78f55d3f9341f5872f9c"
+  },
+  "employeeId": {
+    "$oid": "67c72702bea745e2f28efb10"
+  },
+  "date": {
+    "$date": "2025-03-09T00:00:00.000Z"
+  },
+  "checkInTime": "18:18",
+  "status": "Đi làm muộn",
+  "__v": 0,
+  "checkOutTime": "18:18"
+},
+{
+  "_id": {
+    "$oid": "67cd79fd5d3f9341f5872fb4"
+  },
+  "employeeId": {
+    "$oid": "67c7b083fde9318e3ce75824"
+  },
+  "date": {
+    "$date": "2025-03-09T00:00:00.000Z"
+  },
+  "checkInTime": "18:22",
+  "status": "Đi làm muộn",
+  "__v": 0,
+  "checkOutTime": "18:22"
+},
+{
+  "_id": {
+    "$oid": "67cd7a8c5d3f9341f5872fbf"
+  },
+  "employeeId": {
+    "$oid": "67c7b079fde9318e3ce75820"
+  },
+  "date": {
+    "$date": "2025-03-09T00:00:00.000Z"
+  },
+  "checkInTime": "18:25",
+  "status": "Đi làm muộn",
+  "__v": 0,
+  "checkOutTime": "18:25"
+},
+{
+  "_id": {
+    "$oid": "67cd7d955d3f9341f5872ff6"
+  },
+  "employeeId": {
+    "$oid": "67c7ae36fde9318e3ce7580f"
+  },
+  "date": {
+    "$date": "2025-03-09T00:00:00.000Z"
+  },
+  "checkInTime": "18:37",
+  "status": "Đi làm muộn",
+  "__v": 0,
+  "checkOutTime": "18:38"
+},
+{
+  "_id": {
+    "$oid": "67cddf262637f1cb4ddf5fb6"
+  },
+  "employeeId": {
+    "$oid": "67c72f6e716fbe27b6028efa"
+  },
+  "date": {
+    "$date": "2025-03-09T00:00:00.000Z"
+  },
+  "checkInTime": "01:34",
+  "status": "Đi làm",
+  "__v": 0,
+  "checkOutTime": "01:35"
+},
+{
+  "_id": {
+    "$oid": "67cea29decbc3378b1df1a8a"
+  },
+  "employeeId": {
+    "$oid": "67ca5dca56cebef000ffbc26"
+  },
+  "date": {
+    "$date": "2025-03-10T00:00:00.000Z"
+  },
+  "checkInTime": "15:28",
+  "status": "Đi làm muộn",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cf8b10ee38e89942125306"
+  },
+  "employeeId": {
+    "$oid": "67c72702bea745e2f28efb10"
+  },
+  "date": {
+    "$date": "2025-03-11T00:00:00.000Z"
+  },
+  "checkInTime": "08:00",
+  "status": "Đi làm",
+  "__v": 0,
+  "checkOutTime": "08:00"
+},
+{
+  "_id": {
+    "$oid": "67d0e1526b984b38a995eed5"
+  },
+  "employeeId": {
+    "$oid": "67c72702bea745e2f28efb10"
+  },
+  "date": {
+    "$date": "2025-03-12T00:00:00.000Z"
+  },
+  "checkInTime": "08:20",
+  "status": "Đi làm muộn",
+  "__v": 0,
+  "checkOutTime": "08:20"
+},
+{
+  "_id": {
+    "$oid": "67d77a6be65a3756aba3e9c4"
+  },
+  "employeeId": {
+    "$oid": "67c72702bea745e2f28efb10"
+  },
+  "date": {
+    "$date": "2025-03-17T00:00:00.000Z"
+  },
+  "checkInTime": "08:27",
+  "status": "Đi làm muộn",
+  "__v": 0
+}]

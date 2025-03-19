@@ -1,0 +1,224 @@
+[{
+  "_id": {
+    "$oid": "67c5efa374508bb1ba4d7942"
+  },
+  "email": "admin1@gmail.com",
+  "password": "123456",
+  "role": "admin"
+},
+{
+  "_id": {
+    "$oid": "67c9dea9c11538941f5f3aa7"
+  },
+  "email": "employee3@gmail.com",
+  "password": "123456",
+  "role": "employee",
+  "employeeId": {
+    "$oid": "67c9dea9c11538941f5f3aa9"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ca5dca56cebef000ffbc24"
+  },
+  "email": "employee10@gmail.com",
+  "password": "123456",
+  "role": "employee",
+  "employeeId": {
+    "$oid": "67ca5dca56cebef000ffbc26"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb36abd04fdb71fcff3d8a"
+  },
+  "email": "employee2@gmail.com",
+  "password": "123456",
+  "role": "employee",
+  "employeeId": {
+    "$oid": "67c72702bea745e2f28efb10"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb36bad04fdb71fcff3d90"
+  },
+  "email": "employee4@gmail.com",
+  "password": "123456",
+  "role": "employee",
+  "employeeId": {
+    "$oid": "67c72f2d716fbe27b6028ef6"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb36dbd04fdb71fcff3d96"
+  },
+  "email": "employee5@gmail.com",
+  "password": "123456",
+  "role": "employee",
+  "employeeId": {
+    "$oid": "67c72f6e716fbe27b6028efa"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb36e2d04fdb71fcff3d9c"
+  },
+  "email": "employee6@gmail.com",
+  "password": "123456",
+  "role": "employee",
+  "employeeId": {
+    "$oid": "67c7ac73fde9318e3ce757e4"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb36e9d04fdb71fcff3da2"
+  },
+  "email": "employee7@gmail.com",
+  "password": "123456",
+  "role": "employee",
+  "employeeId": {
+    "$oid": "67c7ad8ffde9318e3ce757f6"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb36f0d04fdb71fcff3da8"
+  },
+  "email": "employee8@gmail.com",
+  "password": "123456",
+  "role": "employee",
+  "employeeId": {
+    "$oid": "67c7ad9dfde9318e3ce757fa"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb36f8d04fdb71fcff3dae"
+  },
+  "email": "employee9@gmail.com",
+  "password": "123456",
+  "role": "employee",
+  "employeeId": {
+    "$oid": "67c7ada6fde9318e3ce757fe"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb370ed04fdb71fcff3db4"
+  },
+  "email": "employee11@gmail.com",
+  "password": "123456",
+  "role": "employee",
+  "employeeId": {
+    "$oid": "67c7adb1fde9318e3ce75802"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb3714d04fdb71fcff3dba"
+  },
+  "email": "employee12@gmail.com",
+  "password": "123456",
+  "role": "employee",
+  "employeeId": {
+    "$oid": "67c7adb8fde9318e3ce75806"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb371ad04fdb71fcff3dc0"
+  },
+  "email": "employee13@gmail.com",
+  "password": "123456",
+  "role": "employee",
+  "employeeId": {
+    "$oid": "67c7ae36fde9318e3ce7580f"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb3722d04fdb71fcff3dc6"
+  },
+  "email": "employee14@gmail.com",
+  "password": "123456",
+  "role": "employee",
+  "employeeId": {
+    "$oid": "67c7b079fde9318e3ce75820"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb372bd04fdb71fcff3dcc"
+  },
+  "email": "employee15@gmail.com",
+  "password": "123456",
+  "role": "employee",
+  "employeeId": {
+    "$oid": "67c7b083fde9318e3ce75824"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb3733d04fdb71fcff3dd2"
+  },
+  "email": "employee16@gmail.com",
+  "password": "123456",
+  "role": "employee",
+  "employeeId": {
+    "$oid": "67c7b08cfde9318e3ce75828"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb373ad04fdb71fcff3dd8"
+  },
+  "email": "employee17@gmail.com",
+  "password": "123456",
+  "role": "employee",
+  "employeeId": {
+    "$oid": "67c7b092fde9318e3ce7582c"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb3740d04fdb71fcff3dde"
+  },
+  "email": "employee18@gmail.com",
+  "password": "123456",
+  "role": "employee",
+  "employeeId": {
+    "$oid": "67c7b099fde9318e3ce75830"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cb3746d04fdb71fcff3de4"
+  },
+  "email": "employee19@gmail.com",
+  "password": "123456",
+  "role": "employee",
+  "employeeId": {
+    "$oid": "67c860e3d64ddb6b6d2275f2"
+  },
+  "__v": 0
+}]

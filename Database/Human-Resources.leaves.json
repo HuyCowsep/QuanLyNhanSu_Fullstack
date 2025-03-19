@@ -1,0 +1,260 @@
+[{
+  "_id": {
+    "$oid": "67c7b18dfde9318e3ce75840"
+  },
+  "employeeId": {
+    "$oid": "67c7adb8fde9318e3ce75806"
+  },
+  "startDate": {
+    "$date": "2025-03-06T17:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-03-10T00:00:00.000Z"
+  },
+  "reason": "Nghỉ phép vì lý do cá nhân, em xin nghỉ để đii chơi 08/03 ạ! Em cảm ơn",
+  "status": "Đã duyệt",
+  "createdAt": {
+    "$date": "2025-03-05T02:06:05.785Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cdcb9ff7a0938db42d2a0c"
+  },
+  "employeeId": {
+    "$oid": "67c9dea9c11538941f5f3aa9"
+  },
+  "startDate": {
+    "$date": "2025-03-10T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-03-12T00:00:00.000Z"
+  },
+  "reason": "Em xin nghỉ vì có việc gia đình ạ, Nguyễn Lương Bình, Đẹp zai quê Việt Nam",
+  "status": "Từ chối",
+  "createdAt": {
+    "$date": "2025-03-09T17:10:55.612Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cdcc75f7a0938db42d2a30"
+  },
+  "employeeId": {
+    "$oid": "67ca5dca56cebef000ffbc26"
+  },
+  "startDate": {
+    "$date": "2025-03-10T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-03-13T00:00:00.000Z"
+  },
+  "reason": "Xin đi 30/4 tại Sài Gòn, lâu lắm không được đi xem rồi ạ. Mong sếp Ok! <3",
+  "status": "Đã duyệt",
+  "createdAt": {
+    "$date": "2025-03-09T17:14:29.021Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d70c5dc10bbf4612e2239f"
+  },
+  "employeeId": {
+    "$oid": "67c9dea9c11538941f5f3aa9"
+  },
+  "startDate": {
+    "$date": "2025-03-17T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-03-19T00:00:00.000Z"
+  },
+  "reason": "Test nghỉ phép",
+  "status": "Đã duyệt",
+  "createdAt": {
+    "$date": "2025-03-16T17:37:33.179Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d70f7a54661a9de5402604"
+  },
+  "employeeId": {
+    "$oid": "67c7ae36fde9318e3ce7580f"
+  },
+  "startDate": {
+    "$date": "2025-03-17T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-03-18T00:00:00.000Z"
+  },
+  "reason": "TEst nghỉ phép turn 2",
+  "status": "Đã duyệt",
+  "createdAt": {
+    "$date": "2025-03-16T17:50:50.670Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d710c975f486a08df90185"
+  },
+  "employeeId": {
+    "$oid": "67c7ae36fde9318e3ce7580f"
+  },
+  "startDate": {
+    "$date": "2025-03-17T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-03-17T00:00:00.000Z"
+  },
+  "reason": "Test nghỉ phép lần thứ 3 - Huy",
+  "status": "Đã duyệt",
+  "createdAt": {
+    "$date": "2025-03-16T17:56:25.489Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d7118d75f486a08df902e7"
+  },
+  "employeeId": {
+    "$oid": "67c7b092fde9318e3ce7582c"
+  },
+  "startDate": {
+    "$date": "2025-03-17T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-03-17T00:00:00.000Z"
+  },
+  "reason": "Test đợt 4",
+  "status": "Đã duyệt",
+  "createdAt": {
+    "$date": "2025-03-16T17:59:41.452Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d71872713d4648bfc87422"
+  },
+  "employeeId": {
+    "$oid": "67c7b092fde9318e3ce7582c"
+  },
+  "startDate": {
+    "$date": "2025-03-20T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-03-20T00:00:00.000Z"
+  },
+  "reason": "test đợt 5 mệt vl",
+  "status": "Đã duyệt",
+  "createdAt": {
+    "$date": "2025-03-16T18:29:06.501Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d71971713d4648bfc8755a"
+  },
+  "employeeId": {
+    "$oid": "67c7b08cfde9318e3ce75828"
+  },
+  "startDate": {
+    "$date": "2025-03-17T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-03-19T00:00:00.000Z"
+  },
+  "reason": "test đợt 6 vì thấy ổn rồi",
+  "status": "Đã duyệt",
+  "createdAt": {
+    "$date": "2025-03-16T18:33:21.753Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d71b92713d4648bfc87962"
+  },
+  "employeeId": {
+    "$oid": "67c7adb8fde9318e3ce75806"
+  },
+  "startDate": {
+    "$date": "2025-03-17T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-03-17T00:00:00.000Z"
+  },
+  "reason": "??? bị sao thế",
+  "status": "Đã duyệt",
+  "createdAt": {
+    "$date": "2025-03-16T18:42:26.613Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d77a87e65a3756aba3ea9f"
+  },
+  "employeeId": {
+    "$oid": "67c72702bea745e2f28efb10"
+  },
+  "startDate": {
+    "$date": "2025-03-17T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-03-18T00:00:00.000Z"
+  },
+  "reason": "test đợt thứ 7",
+  "status": "Đã duyệt",
+  "createdAt": {
+    "$date": "2025-03-17T01:27:35.710Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d781757723368f43dc955e"
+  },
+  "employeeId": {
+    "$oid": "67c72702bea745e2f28efb10"
+  },
+  "startDate": {
+    "$date": "2025-03-18T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-03-18T00:00:00.000Z"
+  },
+  "reason": "không từ chối được đơn ???\n",
+  "status": "Từ chối",
+  "createdAt": {
+    "$date": "2025-03-17T01:57:09.206Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d7825b45a618e81309897b"
+  },
+  "employeeId": {
+    "$oid": "67c72702bea745e2f28efb10"
+  },
+  "startDate": {
+    "$date": "2025-03-19T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2025-03-19T00:00:00.000Z"
+  },
+  "reason": "đã từ chối được ???",
+  "status": "Từ chối",
+  "createdAt": {
+    "$date": "2025-03-17T02:00:59.903Z"
+  },
+  "__v": 0
+}]

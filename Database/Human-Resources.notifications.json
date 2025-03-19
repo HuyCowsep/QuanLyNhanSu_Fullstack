@@ -1,0 +1,86 @@
+[{
+  "_id": {
+    "$oid": "67cc961f3de6647205b74617"
+  },
+  "title": "Cuộc họp công ty tháng 3",
+  "message": "Tất cả nhân viên vui lòng tham gia cuộc họp tổng kết vào ngày 10/03 lúc 9h sáng.",
+  "targetType": "All",
+  "departmentId": null,
+  "createdAt": {
+    "$date": "2025-03-08T19:10:23.825Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cc982c12f904d4c1a021a7"
+  },
+  "title": "Phòng IT: Nâng cấp hệ thống",
+  "message": "Toàn bộ phòng IT cần kiểm tra máy chủ vào ngày 12/03 để bảo trì định kỳ",
+  "targetType": "Department",
+  "departmentId": {
+    "$oid": "67c72871778523d0435cc231"
+  },
+  "createdAt": {
+    "$date": "2025-03-08T19:19:08.845Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cca749377e21bd65a30528"
+  },
+  "title": "Sửa máy",
+  "message": "Phòng công nghệ thông tin ơi",
+  "targetType": "Department",
+  "departmentId": {
+    "$oid": "67c72871778523d0435cc231"
+  },
+  "createdAt": {
+    "$date": "2025-03-08T20:23:37.699Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67cca7bb377e21bd65a30536"
+  },
+  "title": "Cuộc họp công ty tháng 4 và 5",
+  "message": "Tất cả nhân viên vui lòng tham gia cuộc họp tổng kết vào ngày 10/04 lúc 9h sáng. Và ngày 11/05 lúc 16h chiều nhé mọi người",
+  "targetType": "All",
+  "departmentId": null,
+  "createdAt": {
+    "$date": "2025-03-08T20:25:31.967Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ccaec168f1095186914222"
+  },
+  "title": "Gặp gỡ các thành viên FullStack để triển khai thêm kiến thức",
+  "message": "Sáng mai ngày 22/03/2025 chúng ta gặp Trương Gai Bình anh em bạn bè nhé ạ. For Đức Huy :)))",
+  "targetType": "Department",
+  "departmentId": {
+    "$oid": "67c72871778523d0435cc231"
+  },
+  "createdAt": {
+    "$date": "2025-03-08T20:55:29.219Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67ccaf1968f1095186914230"
+  },
+  "title": "Đi picnic cuối tháng 03",
+  "message": "Mai chị em nào đi chơi Campuchia không :)))))) ??\nFrom Nguyễn Đức Huy - Leader",
+  "targetType": "Department",
+  "departmentId": {
+    "$oid": "67c7386ab9e4506e85c85de9"
+  },
+  "createdAt": {
+    "$date": "2025-03-08T20:56:57.333Z"
+  },
+  "__v": 0
+}]

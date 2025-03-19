@@ -1,0 +1,454 @@
+[{
+  "_id": {
+    "$oid": "67c72702bea745e2f28efb10"
+  },
+  "firstName": "Nguyễn",
+  "lastName": "Văn A",
+  "dateOfBirth": "1990-05-20",
+  "gender": "Nam",
+  "address": "123 Đường ABC, Quận 1, TP.HCM",
+  "email": "nguyenvana@example.com",
+  "phone": "0123456789",
+  "department": {
+    "$oid": "67c72871778523d0435cc231"
+  },
+  "position": "Lập trình Fullstack",
+  "salary": 12000000,
+  "role": "Trưởng phòng",
+  "hireDate": {
+    "$date": "2025-03-04T16:14:58.032Z"
+  },
+  "avatar": "/uploads/avatar-1741742445006-738208836.png",
+  "__v": 0,
+  "leaveDaysPerMonth": 5,
+  "remainingLeaveDays": 3
+},
+{
+  "_id": {
+    "$oid": "67c72f2d716fbe27b6028ef6"
+  },
+  "firstName": "Nguyễn",
+  "lastName": "Đức Huy",
+  "dateOfBirth": "1995-08-15",
+  "gender": "Nam",
+  "address": "456 Đường Hoàng Diệu, Quận Ba Đình, Hà Nội",
+  "email": "duchuy@gmail.com",
+  "phone": "0999999999",
+  "department": {
+    "$oid": "67c72871778523d0435cc231"
+  },
+  "position": "Lập trình FrontEnd",
+  "salary": 14500000,
+  "role": "Thành viên",
+  "hireDate": {
+    "$date": "2025-03-04T16:49:49.155Z"
+  },
+  "avatar": "default.jpg",
+  "__v": 0,
+  "leaveDaysPerMonth": 5,
+  "remainingLeaveDays": 5
+},
+{
+  "_id": {
+    "$oid": "67c72f6e716fbe27b6028efa"
+  },
+  "firstName": "Nguyễn",
+  "lastName": "Mạnh Thắng",
+  "dateOfBirth": "1993-10-22",
+  "gender": "Nam",
+  "address": "789 Đường Lê Lợi, Quận Ngô Quyền, Hải Phòng",
+  "email": "manhthang@gmail.com",
+  "phone": "0111111111",
+  "department": {
+    "$oid": "67c72871778523d0435cc231"
+  },
+  "position": "Tester",
+  "salary": 10500000,
+  "role": "Thành viên",
+  "hireDate": {
+    "$date": "2025-03-04T16:50:54.991Z"
+  },
+  "avatar": "default.jpg",
+  "__v": 0,
+  "leaveDaysPerMonth": 5,
+  "remainingLeaveDays": 5
+},
+{
+  "_id": {
+    "$oid": "67c7ac73fde9318e3ce757e4"
+  },
+  "firstName": "Đinh",
+  "lastName": "Quốc Huy",
+  "dateOfBirth": "1995-01-10",
+  "gender": "Nam",
+  "address": "100 Đường Giải Phóng, Quận Hoàng Mai, Hà Nội",
+  "email": "quochuy@gmail.com",
+  "phone": "0222222222",
+  "department": {
+    "$oid": "67c7386ab9e4506e85c85de9"
+  },
+  "position": "Sale",
+  "salary": 11300000,
+  "role": "Thành viên",
+  "hireDate": {
+    "$date": "2025-03-05T01:44:19.300Z"
+  },
+  "avatar": "default.jpg",
+  "__v": 0,
+  "leaveDaysPerMonth": 5,
+  "remainingLeaveDays": 5
+},
+{
+  "_id": {
+    "$oid": "67c7ad8ffde9318e3ce757f6"
+  },
+  "firstName": "Trần",
+  "lastName": "Mai Anh",
+  "dateOfBirth": "1999-05-19",
+  "gender": "Nữ",
+  "address": "101 Đường Phú La, Quận Hà Đông, Hà Nội",
+  "email": "maianh@gmail.com",
+  "phone": "0333333333",
+  "department": {
+    "$oid": "67c7386ab9e4506e85c85de9"
+  },
+  "position": "Content Creator",
+  "salary": 12500000,
+  "role": "Thành viên",
+  "hireDate": {
+    "$date": "2025-03-05T01:49:03.468Z"
+  },
+  "avatar": "default.jpg",
+  "__v": 0,
+  "leaveDaysPerMonth": 5,
+  "remainingLeaveDays": 5
+},
+{
+  "_id": {
+    "$oid": "67c7ad9dfde9318e3ce757fa"
+  },
+  "firstName": "Nguyễn",
+  "lastName": "Văn Dũng",
+  "dateOfBirth": "2001-06-10",
+  "gender": "Nam",
+  "address": "28 Đường Lý Thái Tổ, Quận Cầu Giấy, Hà Nội",
+  "email": "vandung@gmail.com",
+  "phone": "0444444444",
+  "department": {
+    "$oid": "67c7386ab9e4506e85c85de9"
+  },
+  "position": "Digital Marketer",
+  "salary": 13800000,
+  "role": "Thành viên",
+  "hireDate": {
+    "$date": "2025-03-05T01:49:17.886Z"
+  },
+  "avatar": "default.jpg",
+  "__v": 0,
+  "leaveDaysPerMonth": 5,
+  "remainingLeaveDays": 5
+},
+{
+  "_id": {
+    "$oid": "67c7ada6fde9318e3ce757fe"
+  },
+  "firstName": "Lê",
+  "lastName": "Phương Thảo",
+  "dateOfBirth": "2000-01-20",
+  "gender": "Nữ",
+  "address": "101 Đường Giải Phóng, Quận Hoàng Mai, Hà Nội",
+  "email": "phuongthao@gmail.com",
+  "phone": "0555555555",
+  "department": {
+    "$oid": "67c7386ab9e4506e85c85de9"
+  },
+  "position": "PR Executive",
+  "salary": 12000000,
+  "role": "Thành viên",
+  "hireDate": {
+    "$date": "2025-03-05T01:49:26.995Z"
+  },
+  "avatar": "default.jpg",
+  "__v": 0,
+  "leaveDaysPerMonth": 5,
+  "remainingLeaveDays": 5
+},
+{
+  "_id": {
+    "$oid": "67c7adb1fde9318e3ce75802"
+  },
+  "firstName": "Phạm",
+  "lastName": "Tiến Đạt",
+  "dateOfBirth": "2000-01-29",
+  "gender": "Nam",
+  "address": "101 Đường Giải Phóng, Quận Hoàng Mai, Hà Nội",
+  "email": "tiendat@gmail.com",
+  "phone": "0666666666",
+  "department": {
+    "$oid": "67c7386ab9e4506e85c85de9"
+  },
+  "position": "Graphic Designer",
+  "salary": 11000000,
+  "role": "Thành viên",
+  "hireDate": {
+    "$date": "2025-03-05T01:49:37.519Z"
+  },
+  "avatar": "default.jpg",
+  "__v": 0,
+  "leaveDaysPerMonth": 5,
+  "remainingLeaveDays": 5
+},
+{
+  "_id": {
+    "$oid": "67c7adb8fde9318e3ce75806"
+  },
+  "firstName": "Hoàng",
+  "lastName": "Khánh Linh",
+  "dateOfBirth": "2000-09-23",
+  "gender": "Nữ",
+  "address": "101 Đường Giải Phóng, Quận Hoàng Mai, Hà Nội",
+  "email": "khanhlinh@gmail.com",
+  "phone": "0777777777",
+  "department": {
+    "$oid": "67c7386ab9e4506e85c85de9"
+  },
+  "position": "Marketing Analyst",
+  "salary": 13200000,
+  "role": "Thành viên",
+  "hireDate": {
+    "$date": "2025-03-05T01:49:44.159Z"
+  },
+  "avatar": "default.jpg",
+  "__v": 0,
+  "leaveDaysPerMonth": 5,
+  "remainingLeaveDays": 0
+},
+{
+  "_id": {
+    "$oid": "67c7ae36fde9318e3ce7580f"
+  },
+  "firstName": "Nguyễn",
+  "lastName": "Thu Hường",
+  "dateOfBirth": "2003-02-01",
+  "gender": "Nữ",
+  "address": "199 Đường Giải Phóng, Quận Hoàng Mai, Hà Nội",
+  "email": "thuhuong@gmail.com",
+  "phone": "0777776666",
+  "department": {
+    "$oid": "67c7386ab9e4506e85c85de9"
+  },
+  "position": "Marketing Analyst",
+  "salary": 15200000,
+  "role": "Trưởng phòng",
+  "hireDate": {
+    "$date": "2025-03-05T01:51:50.397Z"
+  },
+  "avatar": "default.jpg",
+  "__v": 0,
+  "leaveDaysPerMonth": 5,
+  "remainingLeaveDays": 2
+},
+{
+  "_id": {
+    "$oid": "67c7b079fde9318e3ce75820"
+  },
+  "firstName": "Nguyễn",
+  "lastName": "Thu Trang",
+  "dateOfBirth": "2003-09-11",
+  "gender": "Nữ",
+  "address": "101 Đường Giải Phóng, Quận Hoàng Mai, Hà Nội",
+  "email": "thutrang.hr@gmail.com",
+  "phone": "0888888881",
+  "department": {
+    "$oid": "67c73770b9e4506e85c85de1"
+  },
+  "position": "HR Specialist",
+  "salary": 12500000,
+  "role": "Trưởng phòng",
+  "hireDate": {
+    "$date": "2025-03-05T02:01:29.086Z"
+  },
+  "avatar": "default.jpg",
+  "__v": 0,
+  "leaveDaysPerMonth": 5,
+  "remainingLeaveDays": 5
+},
+{
+  "_id": {
+    "$oid": "67c7b083fde9318e3ce75824"
+  },
+  "firstName": "Trần",
+  "lastName": "Hải Nam",
+  "dateOfBirth": "2000-01-03",
+  "gender": "Nam",
+  "address": "101 Đường Giải Phóng, Quận Hoàng Mai, Hà Nội",
+  "email": "hainam.hr@gmail.com",
+  "phone": "0888888882",
+  "department": {
+    "$oid": "67c73770b9e4506e85c85de1"
+  },
+  "position": "Recruitment Officer",
+  "salary": 11800000,
+  "role": "Thành viên",
+  "hireDate": {
+    "$date": "2025-03-05T02:01:39.666Z"
+  },
+  "avatar": "default.jpg",
+  "__v": 0,
+  "leaveDaysPerMonth": 5,
+  "remainingLeaveDays": 5
+},
+{
+  "_id": {
+    "$oid": "67c7b08cfde9318e3ce75828"
+  },
+  "firstName": "Phạm",
+  "lastName": "Kim Ngân",
+  "dateOfBirth": "2005-02-20",
+  "gender": "Nữ",
+  "address": "101 Đường Giải Phóng, Quận Hoàng Mai, Hà Nội",
+  "email": "kimngan.hr@gmail.com",
+  "phone": "0888888883",
+  "department": {
+    "$oid": "67c73770b9e4506e85c85de1"
+  },
+  "position": "Talent Acquisition",
+  "salary": 12200000,
+  "role": "Thành viên",
+  "hireDate": {
+    "$date": "2025-03-05T02:01:48.677Z"
+  },
+  "avatar": "/uploads/avatar-1741659455824-675324394.png",
+  "__v": 0,
+  "leaveDaysPerMonth": 5,
+  "remainingLeaveDays": 2
+},
+{
+  "_id": {
+    "$oid": "67c7b092fde9318e3ce7582c"
+  },
+  "firstName": "Lê",
+  "lastName": "Minh Quân",
+  "dateOfBirth": "2002-01-22",
+  "gender": "Nam",
+  "address": "101 Đường Giải Phóng, Quận Hoàng Mai, Hà Nội",
+  "email": "minhquan.hr@gmail.com",
+  "phone": "0888888884",
+  "department": {
+    "$oid": "67c73770b9e4506e85c85de1"
+  },
+  "position": "HR Coordinator",
+  "salary": 11500000,
+  "role": "Thành viên",
+  "hireDate": {
+    "$date": "2025-03-05T02:01:54.350Z"
+  },
+  "avatar": "/uploads/avatar-1741659317056-350024763.png",
+  "__v": 0,
+  "leaveDaysPerMonth": 5,
+  "remainingLeaveDays": 3
+},
+{
+  "_id": {
+    "$oid": "67c7b099fde9318e3ce75830"
+  },
+  "firstName": "Hoàng",
+  "lastName": "Bảo Trâm",
+  "dateOfBirth": "2003-03-24",
+  "gender": "Nữ",
+  "address": "101 Đường Giải Phóng, Quận Hoàng Mai, Hà Nội",
+  "email": "baotram.hr@gmail.com",
+  "phone": "0888888885",
+  "department": {
+    "$oid": "67c73770b9e4506e85c85de1"
+  },
+  "position": "HR Assistant",
+  "salary": 11000000,
+  "role": "Thành viên",
+  "hireDate": {
+    "$date": "2025-03-05T02:02:01.987Z"
+  },
+  "avatar": "default.jpg",
+  "__v": 0,
+  "leaveDaysPerMonth": 5,
+  "remainingLeaveDays": 5
+},
+{
+  "_id": {
+    "$oid": "67c860e3d64ddb6b6d2275f2"
+  },
+  "firstName": "Đỗ",
+  "lastName": "Việt Hoàng Hưng",
+  "dateOfBirth": {
+    "$date": "1995-08-15T00:00:00.000Z"
+  },
+  "gender": "Nam",
+  "address": "456 Đường XYZ, Quận 3, TP.HCM",
+  "email": "leminhquan@example.com",
+  "phone": "0987654321",
+  "department": {
+    "$oid": "67c72871778523d0435cc231"
+  },
+  "position": "Kỹ thuật phần cứng",
+  "salary": 15000000,
+  "role": "Thành viên",
+  "hireDate": {
+    "$date": "2025-03-06T00:00:00.000Z"
+  },
+  "avatar": "default.jpg",
+  "leaveDaysPerMonth": 5,
+  "__v": 0,
+  "remainingLeaveDays": 5
+},
+{
+  "_id": {
+    "$oid": "67c9dea9c11538941f5f3aa9"
+  },
+  "firstName": "Nguyễn",
+  "lastName": "Lương Bình",
+  "dateOfBirth": {
+    "$date": "2000-08-22T00:00:00.000Z"
+  },
+  "gender": "Nam",
+  "address": "123 Đường ABC, Quận 10, TP.HCM",
+  "email": "employee3@gmail.com",
+  "phone": "0987654321",
+  "department": {
+    "$oid": "67c73770b9e4506e85c85de1"
+  },
+  "position": "Nhân viên tuyển dụng",
+  "salary": 12000000,
+  "role": "Thành viên",
+  "hireDate": {
+    "$date": "2025-03-06T17:43:05.452Z"
+  },
+  "avatar": "/uploads/avatar-1741661251377-43051821.png",
+  "leaveDaysPerMonth": 5,
+  "__v": 0,
+  "remainingLeaveDays": 2
+},
+{
+  "_id": {
+    "$oid": "67ca5dca56cebef000ffbc26"
+  },
+  "firstName": "Trần Đức",
+  "lastName": "Gia Khánh",
+  "dateOfBirth": "2005-04-13",
+  "gender": "Nam",
+  "address": "Hà Nội, Việt Nam",
+  "email": "employee10@gmail.com",
+  "phone": "0977338618",
+  "department": {
+    "$oid": "67c72871778523d0435cc231"
+  },
+  "position": "Lập trình .Net",
+  "salary": 0,
+  "role": "Thành viên",
+  "hireDate": {
+    "$date": "2025-03-07T02:45:30.592Z"
+  },
+  "avatar": "/uploads/avatar-1741322252348-844171961.jpg",
+  "leaveDaysPerMonth": 5,
+  "__v": 0,
+  "remainingLeaveDays": 1
+}]
