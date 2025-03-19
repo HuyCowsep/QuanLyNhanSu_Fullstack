@@ -39,7 +39,7 @@ app.use('/api/leaves', leaveRoutes); //route cho nghỉ phép
 app.use('/api/activity-log', activityLogRoutes); //route cho log hoạt động
 app.use('/api/notifications', notificationRoutes); //route cho thông báo
 
-// Lắng nghe cổng
+//Chạy ở cổng
 const PORT = process.env.PORT || 9999;
 app.listen(PORT, () => {
   console.log(`🚀 Server chạy tại: http://localhost:${PORT}`);

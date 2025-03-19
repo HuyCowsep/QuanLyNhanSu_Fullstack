@@ -9,6 +9,7 @@ router.get('/', authMiddleware, employeeController.getAllEmployees);
 router.get('/:id', authMiddleware, employeeController.getEmployeeById);
 router.post('/create', authMiddleware, roleMiddleware('admin'), employeeController.createEmployee);
 router.put('/:id/update', authMiddleware, employeeController.updateEmployee);
+router.put('/:id/salary/update', authMiddleware, roleMiddleware('admin'), employeeController.updateEmployeeSalary);
 router.delete('/:id/delete', authMiddleware, roleMiddleware('admin'), employeeController.deleteEmployee);
 router.post('/:id/upload-avatar', authMiddleware, upload.single('avatar'), employeeController.uploadAvatar);
 

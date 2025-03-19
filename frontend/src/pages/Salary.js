@@ -5,6 +5,7 @@ import '../styles/Salary.css';
 
 const Salary = () => {
   const [salaries, setSalaries] = useState([]);
+  const [employee, setEmployee] = useState(null);
   const navigate = useNavigate();
   const token = localStorage.getItem('token');
   const employeeId = localStorage.getItem('employeeId');
@@ -29,6 +30,28 @@ const Salary = () => {
     }
   }, [employeeId, token]);
 
+  useEffect(() => {
+    const fetchSalaryAndEmployee = async () => {
+      try {
+        const salaryRes = await axios.get(`http://localhost:9999/api/payroll/${employeeId}`, {
+          headers: { Authorization: `Bearer ${token}` },
+        });
+        setSalaries(Array.isArray(salaryRes.data) ? salaryRes.data : [salaryRes.data]);
+
+        const employeeRes = await axios.get(`http://localhost:9999/api/employees/${employeeId}`, {
+          headers: { Authorization: `Bearer ${token}` },
+        });
+        setEmployee(employeeRes.data); // Set employee data
+      } catch (error) {
+        console.error('❌ Lỗi khi lấy thông tin lương:', error);
+      }
+    };
+
+    if (employeeId) {
+      fetchSalaryAndEmployee();
+    }
+  }, [employeeId, token]);
+
   return (
     <div className="salary-page">
       {/* Nút Back Home */}
@@ -39,6 +62,11 @@ const Salary = () => {
       </div>
 
       <h1>Bảng Lương của {salaries.length > 0 ? `${salaries[0].employeeId.firstName} ${salaries[0].employeeId.lastName}` : 'Bạn'}</h1>
+      {employee && employee.salary > 0 && (
+        <p style={{ margin: '25px 5px' }}>
+          Lương cơ bản của bạn: <strong>{employee.salary.toLocaleString('vi-VN')} VNĐ</strong>
+        </p>
+      )}
       {salaries.length > 0 && (
         <p style={{ margin: '25px 5px' }}>
           Bạn đã được trả tổng cộng{' '}
@@ -56,7 +84,7 @@ const Salary = () => {
               <th>Ngày</th>
               <th>Tháng</th>
               <th>Năm</th>
-              <th>Lương Cơ Bản</th>
+              <th>Lương cơ bản</th>
               <th>Thưởng</th>
               <th>Phạt</th>
               <th>Tổng Lương</th>

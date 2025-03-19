@@ -54,7 +54,22 @@ const getEmployeeById = async (req, res) => {
 // Thêm nhân viên mới
 const createEmployee = async (req, res) => {
   try {
-    const { firstName, lastName, dateOfBirth, gender, address, email, phone, department, position, role, salary, hireDate, avatar, leaveDaysPerMonth } = req.body;
+    const {
+      firstName,
+      lastName,
+      dateOfBirth,
+      gender,
+      address,
+      email,
+      phone,
+      department,
+      position,
+      role,
+      salary,
+      hireDate,
+      avatar,
+      leaveDaysPerMonth,
+    } = req.body;
     const userId = req.user.id; // Lấy ID người dùng từ token để phục vụ cho cái ActivityLog
     // Kiểm tra email có tồn tại chưa
     const existingEmployee = await Employee.findOne({ email });
@@ -104,7 +119,7 @@ const updateEmployee = async (req, res) => {
     const updates = req.body;
     const userId = req.user.id;
 
-    // Check user có quyền sửa đúng employee của mình không
+    // Check user có quyền sửa đúng profile của mình không
     const user = await User.findById(userId);
     if (!user || user.employeeId.toString() !== id) {
       return res.status(403).json({ message: 'Bạn không có quyền cập nhật thông tin nhân viên này!' });
@@ -120,7 +135,7 @@ const updateEmployee = async (req, res) => {
   }
 };
 
-//Xóa nhân viên
+//Xóa nhân viên của ADMIN
 const deleteEmployee = async (req, res) => {
   try {
     const { id } = req.params;
@@ -135,7 +150,7 @@ const deleteEmployee = async (req, res) => {
   }
 };
 
-//Tải lên ảnh đại diện
+//Hàm tải lên ảnh đại diện cho nhân viên theo ID
 const uploadAvatar = async (req, res) => {
   console.log('🔹 Headers:', req.headers);
   console.log('🔹 Body:', req.body);
@@ -162,4 +177,37 @@ const uploadAvatar = async (req, res) => {
   }
 };
 
-module.exports = { getAllEmployees, getEmployeeById, createEmployee, updateEmployee, deleteEmployee, uploadAvatar };
+//Cập nhật lương cơ bản
+const updateEmployeeSalary = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { salary } = req.body;
+    const userId = req.user.id;
+    // Kiểm tra role ADMIN
+    const user = await User.findById(userId);
+    if (!user || user.role !== 'admin') {
+      return res.status(403).json({ message: 'Bạn không có quyền cập nhật lương của nhân viên này!' });
+    }
+    // Cập nhật lương cho nhân viên
+    const employee = await Employee.findByIdAndUpdate(id, { salary }, { new: true });
+    if (!employee) {
+      return res.status(404).json({ message: 'Nhân viên không tồn tại' });
+    }
+    // Kiểm tra nếu salary là undefined hoặc null
+    if (salary === undefined || salary === null) {
+      return res.status(400).json({ message: 'Lương không hợp lệ' });
+    }
+    // Cập nhật lương
+    employee.salary = salary;
+    await employee.save();
+    // Ghi log hoạt động
+    await logActivity(userId, 'Cập nhật lương nhân viên', 'Employee', id);
+
+    res.json({ message: 'Cập nhật lương nhân viên thành công', employee });
+  } catch (error) {
+    console.error('Lỗi khi cập nhật lương nhân viên:', error.message);
+    res.status(500).json({ message: 'Lỗi server', error: error.message });
+  }
+};
+
+module.exports = { getAllEmployees, getEmployeeById, createEmployee, updateEmployee, deleteEmployee, uploadAvatar, updateEmployeeSalary };

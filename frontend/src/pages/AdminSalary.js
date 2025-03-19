@@ -68,6 +68,7 @@ const AdminSalary = () => {
     fetchEmployees();
   }, [token]);
 
+  //Hàm xoá lương
   const handleDelete = async (id) => {
     Swal.fire({
       title: 'Bạn có chắc chắn muốn xóa?',
@@ -90,12 +91,12 @@ const AdminSalary = () => {
     });
   };
 
+  //Hàm sửa lương trong bảng lương đã trả
   const handleEdit = (salary) => {
     setEditingSalaryId(salary._id);
     setFormData({
-      employeeId: salary.employeeId,
-      month: salary.month,
-      year: salary.year,
+      employeeId: salary.employeeId._id,
+      paymentDate: salary.paymentDate,
       baseSalary: salary.baseSalary,
       bonus: salary.bonus,
       deductions: salary.deductions,
@@ -103,33 +104,75 @@ const AdminSalary = () => {
     setShowModal(true);
   };
 
+  //hàm thêm lương cho nhân viên
   const handleCreate = () => {
     setEditingSalaryId(null);
-    setFormData({ employeeId: '', month: '', year: '', baseSalary: '', bonus: '' });
-    setShowModal(true);
+    setFormData({
+      employeeId: '',
+      paymentDate: '',
+      baseSalary: '',
+      bonus: '',
+    });
+    setShowModal(true); //mở modal
+  };
+
+  //Khi chọn nhân viên nào đó thì hiện luôn lương cơ bản ra
+  const handleEmployeeSelect = async (employeeId) => {
+    setFormData({ ...formData, employeeId });
+    try {
+      const response = await axios.get(`http://localhost:9999/api/employees/${employeeId}`, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      // Tự động điền lương cơ bản vào form
+      setFormData((prevData) => ({
+        ...prevData,
+        baseSalary: response.data.salary || '',
+      }));
+    } catch (error) {
+      console.error('❌ Lỗi khi lấy thông tin nhân viên:', error);
+    }
+  };
+
+  //Hàm chỉnh lương cơ bản
+  const handleSalaryChange = (employeeId, newSalary) => {
+    setEmployees((prevEmployees) => prevEmployees.map((emp) => (emp._id === employeeId ? { ...emp, salary: newSalary } : emp)));
+  };
+
+  //Hàm xác nhận khi đã chỉnh sửa lương cơ bản xong
+  const handleSalaryEdit = async (employeeId, newSalary) => {
+    try {
+      await axios.put(
+        `http://localhost:9999/api/employees/${employeeId}/salary/update`,
+        { salary: newSalary },
+        { headers: { Authorization: `Bearer ${token}` } },
+      );
+      Swal.fire('Thành công!', 'Lương nhân viên đã được cập nhật!', 'success');
+    } catch (error) {
+      Swal.fire('Lỗi!', 'Không thể cập nhật lương nhân viên.', 'error');
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!formData.day || !formData.month || !formData.year) {
-      return Swal.fire('Lỗi!', 'Vui lòng nhập đầy đủ ngày, tháng và năm!', 'error');
+    if (!formData.paymentDate) {
+      return Swal.fire('Lỗi!', 'Vui lòng nhập đầy đủ ngày thanh toán!', 'error');
     }
     // Tạo paymentDate từ ngày/tháng/năm
-    const paymentDate = new Date(formData.year, formData.month - 1, formData.day).toISOString();
+    const paymentDate = new Date(formData.paymentDate).toISOString();
 
     try {
       if (editingSalaryId) {
         await axios.put(
           `http://localhost:9999/api/payroll/update/${editingSalaryId}`,
-          { ...formData, paymentDate }, // Thêm paymentDate vào payload gửi đi
+          { ...formData, paymentDate }, // Gửi paymentDate lên server
           { headers: { Authorization: `Bearer ${token}` } },
         );
         Swal.fire('Thành công!', 'Cập nhật lương thành công!', 'success');
       } else {
         await axios.post(
           'http://localhost:9999/api/payroll/create',
-          { ...formData, paymentDate }, // Thêm paymentDate vào payload gửi đi
+          { ...formData, paymentDate }, // Gửi paymentDate lên server
           { headers: { Authorization: `Bearer ${token}` } },
         );
         Swal.fire('Thành công!', 'Thêm mới lương thành công!', 'success');
@@ -189,14 +232,54 @@ const AdminSalary = () => {
         </button>
       </div>
 
+      {employees.length > 0 && (
+        <div className="salary-table-container">
+          <h2>Lương Cơ Bản Của Nhân Viên</h2>
+          <table className="salary-table">
+            <thead>
+              <tr>
+                <th>Nhân Viên</th>
+                <th>Phòng ban</th>
+                <th>Vị trí công việc</th>
+                <th>Chức vụ</th>
+                <th>Lương Cơ Bản</th>
+                <th>Hành Động</th>
+              </tr>
+            </thead>
+            <tbody>
+              {employees.map((employee) => (
+                <tr key={employee._id}>
+                  <td>
+                    {employee.firstName} {employee.lastName}
+                  </td>
+                  <td>{employee.department.name}</td>
+                  <td>{employee.position}</td>
+                  <td style={{ color: employee.role === 'Trưởng phòng' ? 'red' : 'inherit' }}>{employee.role}</td>
+                  <td>
+                    <input type="number" value={employee.salary} onChange={(e) => handleSalaryChange(employee._id, e.target.value)} />
+                  </td>
+                  <td>
+                    <button
+                      className="edit-btn"
+                      onClick={() => handleSalaryEdit(employee._id, employee.salary)} // Truyền cả employee._id và employee.salary
+                    >
+                      Cập nhật
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+      <br></br>
+      <div style={{ fontSize: '24px', fontWeight: 'bold', margin: '15px 0px' }}>Bảng lương đã trả</div>
       {salaries.length > 0 ? (
         <table className="salary-table">
           <thead>
             <tr>
               <th>Nhân Viên</th>
-              <th>Ngày</th>
-              <th>Tháng</th>
-              <th>Năm</th>
+              <th>Ngày thanh toán</th>
               <th>Lương Cơ Bản</th>
               <th>Thưởng</th>
               <th>Phạt</th>
@@ -207,12 +290,11 @@ const AdminSalary = () => {
           <tbody>
             {sortedSalaries.map((salary) => {
               const employee = employees.find((emp) => emp._id === salary.employeeId);
+              const paymentDate = new Date(salary.paymentDate);
               return (
                 <tr key={salary._id}>
                   <td>{salary.employeeId ? `${salary.employeeId.firstName} ${salary.employeeId.lastName}` : 'Không xác định'}</td>
-                  <td>{new Date(salary.paymentDate).getDate()}</td>
-                  <td>{new Date(salary.paymentDate).getMonth() + 1}</td>
-                  <td>{new Date(salary.paymentDate).getFullYear()}</td>
+                  <td>{paymentDate.toLocaleDateString('vi-VN', { weekday: 'long', year: 'numeric', month: 'numeric', day: 'numeric' })}</td>
                   <td>{salary.baseSalary ? salary.baseSalary.toLocaleString('vi-VN') : 'Chưa cập nhật'} VNĐ</td>
                   <td>{salary.bonus ? salary.bonus.toLocaleString('vi-VN') : 'Chưa cập nhật'} VNĐ</td>
                   <td>{salary.deductions ? `- ${salary.deductions.toLocaleString('vi-VN')}` : '0'} VNĐ</td>
@@ -236,27 +318,34 @@ const AdminSalary = () => {
         <p>Không có dữ liệu lương.</p>
       )}
 
-      {/* 📝 Modal Form */}
+      {/* Modal Form */}
       {showModal && (
         <div className="modal">
           <form className="salary-form" onSubmit={handleSubmit}>
             <label>Nhân Viên</label>
-            <select value={formData.employeeId} onChange={(e) => setFormData({ ...formData, employeeId: e.target.value })} required>
-              <option value="">Chọn nhân viên</option>
-              {employees.map((emp) => (
-                <option key={emp._id} value={emp._id}>
-                  {emp.firstName} {emp.lastName}
-                </option>
-              ))}
-            </select>
-            <label>Ngày</label>
-            <input type="number" value={formData.day} onChange={(e) => setFormData({ ...formData, day: e.target.value })} />
+            {editingSalaryId ? (
+              // Khi sửa lương đã trả, hiển thị tên nhân viên đã được chọn
+              <input
+                type="text"
+                value={`${employees.find((emp) => emp._id === formData.employeeId)?.firstName} ${
+                  employees.find((emp) => emp._id === formData.employeeId)?.lastName
+                }`}
+                readOnly
+              />
+            ) : (
+              // Khi thêm lương mới, sử dụng select để chọn nhân viên từ List
+              <select value={formData.employeeId} onChange={(e) => handleEmployeeSelect(e.target.value)} required>
+                <option value="">Chọn nhân viên</option>
+                {employees.map((emp) => (
+                  <option key={emp._id} value={emp._id}>
+                    {emp.firstName} {emp.lastName}
+                  </option>
+                ))}
+              </select>
+            )}
 
-            <label>Tháng</label>
-            <input type="number" value={formData.month} onChange={(e) => setFormData({ ...formData, month: e.target.value })} />
-
-            <label>Năm</label>
-            <input type="number" value={formData.year} onChange={(e) => setFormData({ ...formData, year: e.target.value })} />
+            <label>Ngày thanh toán</label>
+            <input type="date" value={formData.paymentDate} onChange={(e) => setFormData({ ...formData, paymentDate: e.target.value })} required />
 
             <label>Lương Cơ Bản</label>
             <input type="number" value={formData.baseSalary} onChange={(e) => setFormData({ ...formData, baseSalary: e.target.value })} required />

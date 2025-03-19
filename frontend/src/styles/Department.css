@@ -68,3 +68,71 @@
   background: #d9e2ec;
   transform: translateX(-3px);
 }
+
+/*CSS tuỳ chọn bảng xoá*/
+.employee-table {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.employee-table h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.employee-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.employee-table th,
+.employee-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.employee-table th {
+  background-color: #007bff;
+  color: white;
+  text-transform: uppercase;
+}
+
+.employee-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.btn-show-employee {
+  padding: 8px 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-show-employee:hover {
+  background-color: #218838;
+}
+.btn-cancel-edit {
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+.btn-cancel-edit:hover {
+  background-color: #d9363e;
+}
