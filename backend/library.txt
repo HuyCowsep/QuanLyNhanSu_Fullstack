@@ -1,0 +1,4 @@
+Đã cài các thư viện để làm export với backup nhưng chưa hoàn thành vì vấn đề của Mongo.
+
+"json2csv": "^6.0.0-alpha.2",
+"mongodb-backup": "^1.6.9",

@@ -1,0 +1,9 @@
+ở file tổng có 1 node_module: Chạy lệnh HumanResourcesManagement> npm i
+trong backend có 1 node_module: HumanResourcesManagement\backend> npm i
+trong frontend có 1 node_module: HumanResourcesManagement\frontend> npm i
+
+tổng 3 cái node module cần npm i về để chạy
+
+Đưa các file Json vào MongoDB
+
+Github: https://github.com/HuyCowsep/QuanLyNhanSu_Fullstack
