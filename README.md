@@ -24,9 +24,9 @@ npm install
 cd ../frontend
 npm install
 
-MONGO_URI=mongodb://localhost:27017/Human-Resources
-PORT=9999
-JWT_SECRET=mysecretkey
+- MONGO_URI=mongodb://localhost:27017/Your_database_name
+- PORT=your_port
+- JWT_SECRET=your_secret_key
 
 ---------------------------------------------------------------------------------------------------
 
