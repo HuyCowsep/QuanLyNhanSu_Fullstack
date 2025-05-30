@@ -152,9 +152,6 @@ const deleteEmployee = async (req, res) => {
 
 //Hàm tải lên ảnh đại diện cho nhân viên theo ID
 const uploadAvatar = async (req, res) => {
-  console.log('🔹 Headers:', req.headers);
-  console.log('🔹 Body:', req.body);
-  console.log('🔹 File:', req.file);
 
   try {
     const { id } = req.params;
