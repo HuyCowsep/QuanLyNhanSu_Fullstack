@@ -1,126 +1,98 @@
-/* Reset cơ bản - chỉ cần 1 lần */
+/* Reset cơ bản */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Dashboard container */
-.dashboard-page {
-  min-height: 100vh;
+/* Tổng thể layout */
+.dashboard-container {
   display: flex;
-  flex-direction: row;
+  height: 100vh;
+  overflow: hidden;
 }
 
-/* Menu */
+/* Menu bên trái */
 .menu {
+  width: 250px;
+  background: rgb(117, 114, 114); /* Màu nền đậm */
+  border-right: 1px solid #d9d9d9;
+  padding: 20px;
+  overflow-y: auto;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 110px;
   height: 100%;
-  transition: 0.3s;
-  scrollbar-width: none;
-  overflow: hidden scroll;
-  background: rgb(117, 114, 114);
-  -ms-overflow-style: none;
-  padding: 20px 20px 20px 0;
-  backdrop-filter: blur(5px);
-  box-shadow: 8px 0px 9px 0px rgb(177, 16, 136);
+  box-shadow: 8px 0px 9px 0px rgb(177, 16, 136); /* Hiệu ứng đổ bóng màu mè */
+  color: #fff;
 }
 
-.menu::-webkit-scrollbar {
-  display: none;
-}
-
-.menu:hover {
-  width: 260px;
-}
-
-.menu:hover li span:nth-child(2) {
-  display: block;
-}
-
-/* Menu item */
-.menu-content li {
+/* Danh sách menu */
+.menu-content {
   list-style: none;
+  padding: 0;
+}
+
+.menu-content li {
+  margin-bottom: 15px;
   border-radius: 0px 50px 50px 0;
-  transition: 0.3s;
-  margin-bottom: 20px;
   padding-left: 20px;
+  transition: background-color 0.3s;
 }
 
-.menu-content li a {
-  color: #000; /* Đen */
-  transition: color 0.3s;
-}
-
-/* Hover vào thì nền đen, text trắng */
 .menu-content li:hover {
   background: #0c0c0c;
 }
 
-.menu-content li:hover a {
-  color: #fff; /* Trắng */
-}
-
-.menu-content li span:nth-child(2) {
-  display: none;
-}
-
-/* Link chung */
-a {
-  text-decoration: none;
-  color: rgb(213, 213, 213);
+.menu-content a {
   display: flex;
   align-items: center;
+  padding: 10px;
+  text-decoration: none;
+  color: #fff;
   font-family: 'calibri';
+  transition: background-color 0.2s;
 }
 
-/* Icon wrapper */
+/* Icon bên trái của menu item */
 .icon-wrapper {
-  padding: 10px 16px;
-  font-size: 25px;
   margin-right: 10px;
+  font-size: 20px;
   border-radius: 30px;
   background: #0c0c0c;
+  padding: 10px 16px;
+  color: white;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: white;
 }
 
-.dashboard-content {
-  text-align: center;
-  justify-content: center;
-  align-items: center;
+/* Khu vực nội dung */
+.content-area {
+  margin-left: 250px;
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #fff;
 }
 
-.dashboard-content {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 900px; /* Giới hạn chiều rộng để không bị tràn */
-}
-
+/* Giao diện các thẻ thống kê */
 .admin-stats {
   display: flex;
   gap: 20px;
-  justify-content: center; /* Căn giữa các card */
-  margin-top: 20px;
-  flex-wrap: wrap; /* Cho phép xuống dòng khi không đủ chỗ */
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  justify-content: center;
 }
 
 .stat-card {
   display: flex;
+  flex-direction: column;
   align-items: center;
   background: white;
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box-shadow đẹp */
   width: 200px;
   text-align: center;
-  flex-direction: column;
 }
 
 .stat-icon {
@@ -134,63 +106,36 @@ a {
   font-size: 1.5rem;
 }
 
-.recent-notifications {
-  text-align: center; /* Căn giữa toàn bộ nội dung */
-  margin: 40px 5px;
+.stat-info p {
+  margin: 5px 0 0;
+  color: #666;
 }
 
-.recent-notifications-small {
-  color: red;
+/* Khu vực thông báo gần đây */
+.recent-notifications {
+  background-color: #eae8e8;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 40px 0;
 }
 
 .recent-notifications ul {
   list-style: none;
   padding: 0;
-  text-align: center;
-  margin: 30px 0px;
+  margin: 30px 0;
 }
 
 .recent-notifications li {
   display: flex;
   align-items: center;
-  justify-content: center; /* Căn giữa thông báo */
-  margin: 15px 0;
+  justify-content: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
 }
 
 .notif-icon {
   margin-right: 10px;
   color: #007bff;
-}
-
-@keyframes shake-blink {
-  0%,
-  100% {
-    transform: rotate(0deg) scale(1);
-    opacity: 1;
-  }
-  15% {
-    transform: rotate(-15deg) scale(1.1);
-    opacity: 0.8;
-  }
-  30% {
-    transform: rotate(15deg) scale(1.05);
-    opacity: 0.9;
-  }
-  45% {
-    transform: rotate(-10deg) scale(1);
-    opacity: 1;
-  }
-  60% {
-    transform: rotate(10deg) scale(1.1);
-    opacity: 0.8;
-  }
-  75% {
-    transform: rotate(-5deg) scale(1.05);
-    opacity: 0.9;
-  }
-}
-
-.shake-blink-bell {
-  display: inline-block;
-  animation: shake-blink 1s infinite;
 }

@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
 import '../styles/EditProfile.css';
 import Swal from 'sweetalert2';
 
-const EditProfile = () => {
+const EditProfile = ({ setActiveSection }) => {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -23,8 +22,6 @@ const EditProfile = () => {
   const [avatar, setAvatar] = useState(null);
   const [avatarUrl, setAvatarUrl] = useState('');
 
-  const navigate = useNavigate();
-
   const departments = [
     { id: '67c72871778523d0435cc231', name: 'Phòng Công nghệ thông tin' },
     { id: '67c73770b9e4506e85c85de1', name: 'Phòng Nhân sự' },
@@ -37,7 +34,7 @@ const EditProfile = () => {
       const employeeId = localStorage.getItem('employeeId');
 
       if (!token || !employeeId) {
-        navigate('/Login&Register_Form');
+        window.location.href = '/Login&Register_Form';
         return;
       }
 
@@ -63,26 +60,25 @@ const EditProfile = () => {
           hireDate,
         });
         if (avatar) {
-          setAvatarUrl(`http://localhost:9999${avatar}`); // Nếu user đã có avatar thì hiển thị
+          setAvatarUrl(`http://localhost:9999${avatar}`);
         }
       } catch (error) {
         console.error('Lỗi tải thông tin:', error);
-        navigate('/Login&Register_Form');
+        window.location.href = '/Login&Register_Form';
       }
     };
 
     fetchProfile();
-  }, [navigate]);
+  }, []);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleFileChange = (e) => {
-    const file = e.target.files[0]; // Lấy file đầu tiên
-
+    const file = e.target.files[0];
     if (file) {
-      setAvatar(file); // Chỉ cần dùng một state là đủ
+      setAvatar(file);
     }
   };
 
@@ -103,7 +99,7 @@ const EditProfile = () => {
     const employeeId = localStorage.getItem('employeeId');
 
     try {
-      const res = await axios.post(`http://localhost:9999/api/employees/${employeeId}/upload-avatar`, formData, {
+      await axios.post(`http://localhost:9999/api/employees/${employeeId}/upload-avatar`, formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'multipart/form-data',
@@ -115,9 +111,7 @@ const EditProfile = () => {
         title: 'Thành công!',
         text: 'Avatar đã được cập nhật!',
       }).then(() => {
-        setTimeout(() => {
-          window.location.reload();
-        }, 500);
+        setActiveSection('profile'); // Quay lại Profile sau khi upload
       });
     } catch (error) {
       console.error('Lỗi upload avatar:', error);
@@ -140,15 +134,15 @@ const EditProfile = () => {
       });
 
       Swal.fire({
-        icon: 'success', // Loại cảnh báo: success, error, warning, info, question
+        icon: 'success',
         title: 'Thành công!',
         text: 'Cập nhật thông tin thành công!',
       });
-      navigate('/profile');
+      setActiveSection('profile'); // Quay lại Profile sau khi lưu
     } catch (error) {
       console.error('Lỗi cập nhật:', error);
       Swal.fire({
-        icon: 'error', // Loại cảnh báo: success, error, warning, info, question
+        icon: 'error',
         title: 'Lỗi!',
         text: 'Cập nhật thông tin thất bại!',
       });
@@ -157,32 +151,18 @@ const EditProfile = () => {
 
   return (
     <div className="edit-profile-container">
-      {/* 🔥 Nút Back Home */}
-      <div className="back-home-container">
-        <span className="back-home" onClick={() => navigate('/dashboard')}>
-          ⬅️ Back Home
-        </span>
-      </div>
-
       <h2>Edit personal information</h2>
-
       <div className="avatar-container">
         <img src={avatarUrl} alt="Avatar" className="avatar-preview" />
-
-        {/* Nút chọn file đẹp hơn */}
         <label htmlFor="file-upload" className="file-label">
           Chọn ảnh
         </label>
         <input id="file-upload" type="file" accept="image/*" className="file-input" onChange={handleFileChange} />
-
-        {/* Hiển thị tên file đã chọn */}
         <span className="file-name">{avatar ? avatar.name : 'Chưa có ảnh'}</span>
-
         <button type="button" onClick={handleUploadAvatar} className="upload-btn">
           Upload Avatar
         </button>
       </div>
-
       <form onSubmit={handleSubmit} className="edit-profile-form">
         <div className="form-group">
           <label>Họ:</label>
@@ -238,9 +218,13 @@ const EditProfile = () => {
         </div>
         <div className="form-group">
           <label>Ngày bắt đầu làm việc:</label>
-          <input type="text" value={formData.hireDate ? new Date(formData.hireDate).toLocaleDateString('vi-VN') : 'Chưa cập nhật'} disabled className="form-input disabled" />
+          <input
+            type="text"
+            value={formData.hireDate ? new Date(formData.hireDate).toLocaleDateString('vi-VN') : 'Chưa cập nhật'}
+            disabled
+            className="form-input disabled"
+          />
         </div>
-
         <button type="submit" className="submit-btn">
           Lưu thay đổi
         </button>

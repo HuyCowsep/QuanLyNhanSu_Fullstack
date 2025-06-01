@@ -1,15 +1,13 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const connectDB = require('./config/db'); //import file kết nối MongoDB
+const connectDB = require('./config/db');
 const path = require('path');
 
 const app = express();
 
 // Middleware
 app.use(cors());
-
-// Cho phép truy cập ảnh đã upload
 
 // KHÔNG ĐỂ `express.json()` TRƯỚC `multer`, để tránh lỗi khi upload file
 app.use(express.urlencoded({ extended: true })); // Hỗ trợ form data (tốt cho multer)

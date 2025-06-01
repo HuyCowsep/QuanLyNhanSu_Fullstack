@@ -1,138 +1,138 @@
 .department-page {
+  background-color: #f4f6f8;
+  min-height: 100vh;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
   text-align: center;
-  padding: 20px;
-  font-family: 'Poppins', sans-serif;
+  margin-bottom: 30px;
 }
 
 .search-box {
-  width: 60%;
-  padding: 10px;
-  margin: 15px 0;
-  border-radius: 8px;
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 15px;
   border: 1px solid #ccc;
-  font-size: 16px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .department-card {
-  background: white;
-  padding: 20px;
-  margin: 15px auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  max-width: 600px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 30px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
 }
 
-.department-card h2 {
+.department-header h2 {
+  margin: 0 0 8px;
   color: #007bff;
+}
+
+.department-header p {
+  margin: 0;
+  font-size: 15px;
+  color: #444;
+}
+
+.department-body {
+  margin-top: 16px;
+}
+
+.department-body p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #555;
 }
 
 .employee-list {
   list-style: none;
-  padding: 0;
+  padding-left: 0;
+  margin-top: 8px;
 }
 
 .employee-list li {
-  background: #f8f9fa;
-  padding: 8px;
-  border-radius: 5px;
-  margin: 5px 0;
+  padding: 4px 0;
+  border-bottom: 1px dashed #eee;
   font-size: 14px;
+  color: #444;
 }
 
-/* 🔥 Căn chỉnh lại nút Back Home */
-.back-home-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 15px;
+.department-actions {
+  margin-top: 16px;
 }
 
-.back-home {
-  font-size: 16px;
-  color: #007bff;
-  cursor: pointer;
-  font-weight: bold;
-  transition: color 0.3s ease, transform 0.2s;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  background: #f0f4f8;
-  padding: 8px 12px;
+.btn-edit,
+.btn-cancel {
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
   border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  margin-right: 8px;
+  transition: background-color 0.3s ease;
 }
 
-.back-home:hover {
-  color: #0056b3;
-  background: #d9e2ec;
-  transform: translateX(-3px);
+.btn-edit {
+  background-color: #007bff;
+  color: #fff;
 }
 
-/*CSS tuỳ chọn bảng xoá*/
+.btn-edit:hover {
+  background-color: #0056b3;
+}
+
+.btn-cancel {
+  background-color: #ddd;
+  color: #333;
+}
+
+.btn-cancel:hover {
+  background-color: #bbb;
+}
+
 .employee-table {
   margin-top: 20px;
-  padding: 15px;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.employee-table h3 {
-  text-align: center;
-  margin-bottom: 10px;
-  font-size: 1.5rem;
-  color: #333;
+  overflow-x: auto;
 }
 
 .employee-table table {
   width: 100%;
   border-collapse: collapse;
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
 }
 
 .employee-table th,
 .employee-table td {
-  padding: 12px;
+  border: 1px solid #ccc;
+  padding: 10px;
   text-align: left;
-  border-bottom: 1px solid #ddd;
+  font-size: 14px;
 }
 
 .employee-table th {
-  background-color: #007bff;
-  color: white;
-  text-transform: uppercase;
+  background-color: #f1f3f5;
+  font-weight: 600;
 }
 
-.employee-table tr:hover {
-  background-color: #f1f1f1;
-}
-
-.btn-show-employee {
-  padding: 8px 12px;
-  background-color: #28a745;
+.delete-btn {
+  background-color: #dc3545;
   color: white;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.btn-show-employee:hover {
-  background-color: #218838;
-}
-.btn-cancel-edit {
-  background-color: #ff4d4f;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  cursor: pointer;
+  padding: 6px 12px;
   border-radius: 4px;
-  margin-left: 10px;
+  cursor: pointer;
+  font-size: 13px;
 }
 
-.btn-cancel-edit:hover {
-  background-color: #d9363e;
+.delete-btn:hover {
+  background-color: #b02a37;
 }

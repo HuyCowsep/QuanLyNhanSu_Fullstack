@@ -1,59 +1,62 @@
-/* Salary.css - Dùng chung cho Salary.js và AdminSalary.js */
-
-/* 🌟 Cấu trúc chính */
 .salary-page,
 .admin-salary-page {
-  max-width: 1200px;
-  margin: auto;
+  width: 100%;
   padding: 20px;
-  background: #f8fbff;
+  background: linear-gradient(135deg, #e6f0fa 0%, #d1e2f3 100%);
   border-radius: 12px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* 🌟 Nút Back Home */
+/* Back Home */
 .back-home-container {
   display: flex;
-  justify-content: flex-start;
-  margin-bottom: 20px;
+  justify-content: center;
+  padding: 10px 0;
 }
 
 .salary-page .back-home {
-  background: #007bff;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 6px;
+  font-size: 16px;
+  color: #1e88e5;
   cursor: pointer;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.3s;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #e3f2fd;
+  padding: 8px 14px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
 
 .salary-page .back-home:hover {
-  background: #0056b3;
+  color: #1565c0;
+  background: #bbdefb;
+  transform: translateX(-2px);
 }
 
-/* 🌟 Tiêu đề */
+/* Tiêu đề */
 h1 {
-  color: #2c3e50;
+  color: #1e88e5;
   font-size: 26px;
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 15px;
 }
 
-/* 🌟 Bảng lương */
+/* Bảng lương */
 .salary-table {
   width: 100%;
   border-collapse: collapse;
   background: white;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .salary-table th {
-  background: #007bff;
+  background: #1e88e5;
   color: white;
   padding: 12px;
   text-align: center;
@@ -62,55 +65,61 @@ h1 {
 
 .salary-table td {
   padding: 12px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #e0e0e0;
   text-align: center;
   font-size: 14px;
 }
 
 .salary-table tr:nth-child(even) {
-  background: #f2f6fc;
+  background: #f5f7fa;
 }
 
 .salary-table tr:hover {
-  background: #e9f5ff;
+  background: #e3f2fd;
 }
 
-/* 🌟 Nút Xóa (Chỉ dành cho Admin) */
+/* Nút Xóa (Admin) */
 .delete-btn {
-  background: #e74c3c;
+  background: #f44336;
   color: white;
   border: none;
   padding: 8px 12px;
   border-radius: 5px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .delete-btn:hover {
-  background: #c0392b;
+  background: #e53935;
+  transform: scale(1.03);
 }
 
-/* 🌟 Nút Sửa CHo admin*/
+/* Nút Sửa (Admin) */
 .edit-btn {
-  background: #f39c12; /* Màu cam */
+  background: #f39c12;
   color: white;
   border: none;
   padding: 8px 12px;
   border-radius: 5px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-/* 🌟 Nút Thêm Lương cho admin */
+.edit-btn:hover {
+  background: #e67e22;
+  transform: scale(1.03);
+}
+
+/* Nút Thêm Lương (Admin) */
 .add-btn-container {
   display: flex;
-  justify-content: center; /* Căn giữa theo chiều ngang */
-  align-items: center; /* Căn giữa theo chiều dọc */
-  margin: 30px 0px; /* Tạo khoảng cách giữa nút và bảng */
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
 }
 
 .add-btn {
-  background: #3498db;
+  background: #1e88e5;
   color: white;
   border: none;
   padding: 8px 12px;
@@ -124,15 +133,11 @@ h1 {
 }
 
 .add-btn:hover {
-  background: #2980b9;
+  background: #1565c0;
   transform: scale(1.05);
 }
 
-.edit-btn:hover {
-  background: #e67e22;
-}
-
-/* 📝 Modal Overlay */
+/* Modal Overlay */
 .admin-salary-page .modal {
   position: fixed;
   top: 0;
@@ -146,7 +151,7 @@ h1 {
   z-index: 999;
 }
 
-/* 📌 Modal Container */
+/* Modal Container */
 .admin-salary-page .salary-form {
   background: white;
   padding: 20px;
@@ -154,13 +159,12 @@ h1 {
   width: 400px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
-  position: relative;
   animation: fadeIn 0.3s ease-in-out;
 }
 
-/* 🎨 Input Fields */
+/* Input Fields */
 .admin-salary-page .salary-form label {
-  font-weight: bold;
+  font-weight: 500;
   display: block;
   text-align: left;
   margin-top: 10px;
@@ -171,12 +175,20 @@ h1 {
   width: 100%;
   padding: 8px;
   margin-top: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #e0e0e0;
   border-radius: 5px;
   font-size: 16px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* 🛠 Buttons */
+.admin-salary-page .salary-form input:focus,
+.admin-salary-page .salary-form select:focus {
+  border-color: #1e88e5;
+  box-shadow: 0 0 5px rgba(30, 136, 229, 0.2);
+  outline: none;
+}
+
+/* Buttons */
 .admin-salary-page .salary-form button {
   margin-top: 15px;
   padding: 10px 15px;
@@ -184,35 +196,36 @@ h1 {
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .admin-salary-page .salary-form button[type='submit'] {
-  background: #007bff;
+  background: #1e88e5;
   color: white;
 }
 
 .admin-salary-page .salary-form button[type='submit']:hover {
-  background: #0056b3;
+  background: #1565c0;
+  transform: scale(1.02);
 }
 
 .admin-salary-page .salary-form button[type='button'] {
-  background: #dc3545;
+  background: #f44336;
   color: white;
   margin-left: 10px;
 }
 
 .admin-salary-page .salary-form button[type='button']:hover {
-  background: #a71d2a;
+  background: #e53935;
+  transform: scale(1.02);
 }
 
-/*Bảng lương tham khảo*/
+/* Bảng lương tham khảo */
 .salary-guide-container {
-  margin: 20px 0;
   padding: 15px;
   background: white;
   border-radius: 8px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .salary-guide-table {
@@ -223,13 +236,14 @@ h1 {
 
 .salary-guide-table th,
 .salary-guide-table td {
-  border: 1px solid #ddd;
+  border: 1px solid #e0e0e0;
   padding: 10px;
   text-align: left;
 }
 
 .salary-guide-table th {
-  background-color: #f4f4f4;
+  background-color: #f5f7fa;
+  color: #444;
 }
 
 .salary-guide-table td[contenteditable='true'] {
@@ -237,7 +251,7 @@ h1 {
   cursor: text;
 }
 
-/* ✨ Animation */
+/* Animation */
 @keyframes fadeIn {
   from {
     transform: scale(0.8);

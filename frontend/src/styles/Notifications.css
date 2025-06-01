@@ -2,132 +2,48 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to right, #e3f2fd, #bbdefb);
+  background: linear-gradient(135deg, #e6f0fa 0%, #d1e2f3 100%);
   min-height: 100vh;
 }
 
-/* 🎨 Tiêu đề chính */
+.notifications-header {
+  width: 100%;
+  background: #ffffff;
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: center;
+}
+
 .notifications-page h1 {
   font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #222;
-  text-transform: uppercase;
-}
-
-/* 📩 Form gửi thông báo */
-.notification-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  width: 100%;
-  gap: 15px;
-}
-
-/* 🔹 Input và textarea */
-.notification-form input,
-.notification-form textarea,
-.notification-form select {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  transition: 0.3s ease;
-}
-
-/* Khi focus vào input */
-.notification-form input:focus,
-.notification-form textarea:focus,
-.notification-form select:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  outline: none;
-}
-
-/* 🔘 Nút gửi thông báo */
-.notification-form button {
-  padding: 10px 15px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: 0.3s ease;
-}
-
-.notification-form button:hover {
-  background-color: #0056b3;
-}
-
-/* 📩 Danh sách thông báo */
-.notifications-list {
-  margin-top: 30px;
-  width: 100%;
-  max-width: 600px;
-}
-
-/* 🔥 Card thông báo */
-.notification-card {
-  background: white;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
   margin-bottom: 15px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.notification-card:hover {
-  transform: scale(1.03);
-}
-
-.notification-card h2 {
-  font-size: 20px;
-  color: #007bff;
-  margin-bottom: 5px;
-}
-
-.notification-card p {
-  font-size: 16px;
-  color: #333;
-}
-
-/* ⏳ Thời gian thông báo */
-.notification-card small {
-  display: block;
-  margin-top: 5px;
-  font-size: 14px;
-  color: #777;
+  color: #1e88e5;
+  text-transform: uppercase;
 }
 
 .notification-tabs {
   display: flex;
   gap: 10px;
-  margin-bottom: 15px;
+  justify-content: center;
 }
 
 .notification-tabs button {
-  padding: 10px 15px;
+  padding: 10px 20px;
   border: none;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
   background-color: #e0e0e0;
 }
 
 .notification-tabs button.active {
-  background-color: #007bff;
+  background-color: #1e88e5;
   color: white;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .notification-tabs button:disabled {
@@ -135,136 +51,66 @@
   cursor: not-allowed;
 }
 
+.notifications-list {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
 .notification-card {
   background: white;
   padding: 15px;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.notification-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.notification-content {
+  flex: 1;
 }
 
 .notification-card h2 {
-  color: #007bff;
   font-size: 20px;
+  color: #1e88e5;
+  margin-bottom: 5px;
+  font-weight: 500;
 }
 
 .notification-card p {
   font-size: 16px;
-  margin: 5px 0;
-}
-
-/*bổ sung thêm cho thằng admin notification*/
-/* 🎨 CSS dành riêng cho Admin Notifications */
-.admin-notifications-container {
-  max-width: 1000px;
-  margin: 40px 0px;
-  padding: 20px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.admin-notifications-container h2 {
-  text-align: center;
-  font-size: 24px;
   color: #333;
-  font-weight: bold;
-  margin-bottom: 15px;
+  margin: 0;
 }
 
-.notification-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.notification-table th {
-  background: #007bff;
-  color: white;
-  padding: 12px;
-  text-align: left;
-  font-weight: bold;
-}
-
-.notification-table td {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-}
-
-.notification-table tr:hover {
-  background: #f1f1f1;
-}
-
-.notification-empty {
-  text-align: center;
-  font-style: italic;
-  color: #888;
-  padding: 15px;
-}
-
-/* 🔹 Form gửi thông báo */
-.notification-form {
-  background: #f9f9f9;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+.notification-meta {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  color: #777;
 }
 
-.notification-form input,
-.notification-form textarea,
-.notification-form select {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-.notification-form textarea {
-  resize: vertical;
-  height: 80px;
-}
-
-.notification-form button {
-  background: #007bff;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.notification-form button:hover {
-  background: #0056b3;
-}
-
-/* 🔥 Cải tiến giao diện thông báo từng phòng ban */
-.department-notifications {
-  margin-top: 20px;
-  padding: 15px;
-  border-radius: 8px;
-  background: #eef4ff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.department-notifications h3 {
-  font-size: 20px;
-  color: #007bff;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-/* 🏢 Thông báo từng phòng nếu không có dữ liệu */
-.no-department-notifications {
+.no-notifications {
   text-align: center;
-  font-style: italic;
+  padding: 20px;
+  background: #f5f7fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.no-notifications p {
+  font-size: 16px;
   color: #888;
-  padding: 15px;
+  margin: 0;
 }

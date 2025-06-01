@@ -1,58 +1,25 @@
-/* 🌟 Tổng quan trang nghỉ phép */
 .leave-page {
-  max-width: 900px;
-  margin: 20px auto;
+  width: 100%;
   padding: 20px;
-  background: rgb(241, 235, 235);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f4f2f2;
   border-radius: 8px;
+  font-family: "Poppins", sans-serif;
 }
 
-/* 🔥 Nút Back Home */
-.back-home-container {
-  margin-bottom: 15px;
-  margin: 20px auto;
-}
-.back-home {
-  background: #007bff;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.3s;
-}
-.back-home:hover {
-  background: #0056b3;
-  text-decoration: underline;
-  color: white;
-}
-
-/* 📌 Tiêu đề */
+/* Tiêu đề */
 .leave-page h1 {
   text-align: center;
-  color: #333;
+  color: #1e88e5;
+  font-size: 28px;
+  margin-bottom: 20px;
 }
 
-/* 📝 Biểu mẫu xin nghỉ phép */
-.leave-page fieldset {
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.leave-page legend {
-  font-weight: bold;
-  font-size: 14px;
-}
-
-/* 🎨 Màu sắc số ngày nghỉ còn lại */
+/* Số ngày nghỉ còn lại */
 .leave-remaining {
   font-size: 18px;
-  font-weight: bold;
-  padding: 10px;
+  font-weight: 500;
+  padding: 8px 12px;
   border-radius: 5px;
   display: inline-block;
   margin-bottom: 15px;
@@ -60,33 +27,54 @@
 
 .leave-remaining.green {
   color: white;
-  background-color: green;
+  background-color: #4caf50;
 }
 
 .leave-remaining.orange {
   color: white;
-  background-color: orange;
+  background-color: #ff9800;
 }
 
 .leave-remaining.red {
   color: white;
-  background-color: red;
+  background-color: #f44336;
 }
 
+/* Form xin nghỉ phép */
 .leave-form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   margin-bottom: 20px;
+}
+
+.leave-form fieldset {
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.leave-form legend {
+  font-weight: 500;
+  font-size: 14px;
+  color: #444;
 }
 
 .leave-form input,
 .leave-form textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid #6e6e6e;
+  border: 1px solid #e0e0e0;
   border-radius: 5px;
   font-size: 14px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.leave-form input:focus,
+.leave-form textarea:focus {
+  border-color: #1e88e5;
+  box-shadow: 0 0 5px rgba(30, 136, 229, 0.2);
+  outline: none;
 }
 
 .leave-form textarea {
@@ -94,84 +82,74 @@
   resize: vertical;
 }
 
-.leave-page .leave-form button {
-  background: #007bff;
+.leave-form button {
+  background: #1e88e5;
   color: white;
   padding: 10px 20px;
   border-radius: 6px;
   cursor: pointer;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.3s;
+  font-weight: 500;
+  border: none;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.leave-page .leave-form button:hover {
-  background: #0056b3;
-  color: white;
+.leave-form button:hover {
+  background: #1565c0;
+  transform: scale(1.02);
 }
 
-/* 📊 Bảng nghỉ phép */
+/* Bảng nghỉ phép */
 .leave-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .leave-table th,
 .leave-table td {
-  padding: 10px;
+  padding: 12px;
   text-align: center;
-  border: 1px solid #ddd;
+  border: 1px solid #e0e0e0;
 }
 
 .leave-table th {
-  background: #007bff;
+  background: #1e88e5;
   color: white;
 }
 
 .leave-table tbody tr:nth-child(even) {
-  background: #f9f9f9;
+  background: #f5f7fa;
 }
 
-/* 🎨 Màu sắc trạng thái nghỉ phép này bên trang Admin */
+/* Trạng thái nghỉ phép */
 .leave-status {
-  font-weight: bold;
-  padding: 5px;
+  font-weight: 500;
+  padding: 5px 8px;
   border-radius: 5px;
 }
 
-.leave-status.chờ-duyệt {
-  color: white;
-  background: orange;
-}
-
-.leave-status.đã-duyệt {
-  color: white;
-  background: green;
-}
-
-.leave-status.từ-chối {
-  color: white;
-  background: red;
-}
-
-/* 🛠️ Nút thao tác này của bên nhân viên*/
+.leave-status.chờ-duyệt,
 .leave-status.pending {
   color: white;
-  background: orange;
+  background: #ff9800;
 }
 
+.leave-status.đã-duyệt,
 .leave-status.approved {
   color: white;
-  background: green;
+  background: #4caf50;
 }
 
+.leave-status.từ-chối,
 .leave-status.rejected {
   color: white;
-  background: red;
+  background: #f44336;
 }
 
-/* 🛠️ Nút thao tác */
+/* Nút thao tác */
 .approve-btn,
 .reject-btn,
 .delete-btn {
@@ -180,31 +158,35 @@
   margin: 2px;
   cursor: pointer;
   border-radius: 5px;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .approve-btn {
-  background: green;
+  background: #4caf50;
   color: white;
 }
 
 .reject-btn {
-  background: orange;
+  background: #ff9800;
   color: white;
 }
 
 .delete-btn {
-  background: red;
+  background: #f44336;
   color: white;
 }
 
 .approve-btn:hover {
-  background: darkgreen;
+  background: #43a047;
+  transform: scale(1.03);
 }
 
 .reject-btn:hover {
-  background: darkorange;
+  background: #f57c00;
+  transform: scale(1.03);
 }
 
 .delete-btn:hover {
-  background: darkred;
+  background: #e53935;
+  transform: scale(1.03);
 }

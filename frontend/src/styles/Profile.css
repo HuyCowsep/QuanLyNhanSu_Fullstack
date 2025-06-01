@@ -1,116 +1,185 @@
-/* Căn chỉnh toàn bộ trang Profile */
 .profile-page {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(to right, #f0f4f8, #d9e2ec);
   font-family: 'Poppins', sans-serif;
-  padding: 20px;
+  padding: 0;
+  margin: 0;
+  overflow-y: auto;
 }
 
 .profile-page .profile-title {
-  font-size: 35px;
+  font-size: 32px;
   font-weight: 600;
-  color: #2c7a7b;
-  margin-top: 15px;
-  margin-bottom: 20px;
+  color: #1e88e5;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-/* Căn chỉnh container chứa profile */
 .profile-page .profile-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  padding: 20px;
 }
 
-/* Căn chỉnh lại card */
 .profile-page .profile-card {
-  background: white;
-  padding: 30px;
+  background: #ebe9e9;
+  padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  max-width: 450px;
   width: 100%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .profile-page .profile-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
 
-/* Căn chỉnh lại ảnh đại diện */
-.profile-page .profile-avatar {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  border: 4px solid #007bff;
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 15px;
 }
 
-/* Tiêu đề */
+.profile-page .profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #1e88e5;
+  margin-bottom: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
 .profile-page .profile-name {
-  color: #2c7a7b;
-  font-size: 26px;
+  color: #1565c0;
+  font-size: 24px;
   font-weight: 600;
   margin-bottom: 5px;
 }
 
-/* Đường kẻ ngang */
-.profile-page .profile-divider {
-  width: 85%;
-  margin: 15px auto;
-  border: 1px solid #b0bec5;
+.profile-role {
+  font-size: 16px;
+  color: #777;
+  font-weight: 400;
+  margin-bottom: 10px;
 }
 
-/* Nút "Back Home" căn chỉnh đúng vị trí */
+.profile-page .profile-divider {
+  width: 90%;
+  margin: 12px auto;
+  border: 1px solid #b0bec5;
+  opacity: 0.7;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+  padding: 0 10px;
+}
+
+.profile-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: #f5f7fa;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.profile-info:hover {
+  background: #e3f2fd;
+}
+
+.info-label {
+  font-weight: 500;
+  color: #444;
+  flex: 1;
+}
+
+.info-value {
+  color: #1565c0;
+  flex: 2;
+  text-align: right;
+}
+
 .profile-page .back-home-container {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 15px;
+  padding: 10px 0;
 }
 
 .profile-page .back-home {
   font-size: 16px;
-  color: #007bff;
+  color: #1e88e5;
   cursor: pointer;
-  font-weight: bold;
-  transition: color 0.3s ease, transform 0.2s;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
   display: flex;
   align-items: center;
-  gap: 5px;
-  background: #f0f4f8;
-  padding: 8px 12px;
+  gap: 6px;
+  background: #e3f2fd;
+  padding: 8px 14px;
   border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
 
 .profile-page .back-home:hover {
-  color: #0056b3;
-  background: #d9e2ec;
-  transform: translateX(-3px);
+  color: #1565c0;
+  background: #bbdefb;
+  transform: translateX(-2px);
 }
 
-/* Nút chỉnh sửa */
 .profile-page .edit-profile-btn {
-  margin-top: 20px;
-  padding: 12px 18px;
-  background-color: #007bff;
+  margin-top: 15px;
+  padding: 10px 16px;
+  background-color: #1e88e5;
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 18px;
-  font-weight: bold;
-  transition: background 0.3s ease, transform 0.2s;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 .profile-page .edit-profile-btn:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
+  background-color: #1565c0;
+  transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+  .profile-page .profile-container {
+    padding: 15px;
+  }
+  .profile-page .profile-card {
+    padding: 20px;
+  }
+  .profile-page .profile-title {
+    font-size: 28px;
+  }
+  .profile-page .profile-avatar {
+    width: 100px;
+    height: 100px;
+  }
+  .profile-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  .info-value {
+    text-align: left;
+  }
 }

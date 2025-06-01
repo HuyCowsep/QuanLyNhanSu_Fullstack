@@ -1,143 +1,94 @@
-/* CNhân viên giao diện Attendance */
 .attendance-page {
   text-align: center;
-  padding: 20px;
+  padding: 0;
   font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e6f0fa 0%, #d1e2f3 100%);
 }
 
-/* Căn chỉnh lại nút Back Home */
+/* Back Home */
 .back-home-container {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 15px;
+  padding: 10px 0;
 }
 
 .back-home {
   font-size: 16px;
-  color: #007bff;
+  color: #1e88e5;
   cursor: pointer;
-  font-weight: bold;
-  transition: color 0.3s ease, transform 0.2s;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
   display: flex;
   align-items: center;
-  gap: 5px;
-  background: #f0f4f8;
-  padding: 8px 12px;
+  gap: 6px;
+  background: #e3f2fd;
+  padding: 8px 14px;
   border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
 
 .back-home:hover {
-  color: #0056b3;
-  background: #d9e2ec;
-  transform: translateX(-3px);
+  color: #1565c0;
+  background: #bbdefb;
+  transform: translateX(-2px);
 }
 
 /* Chấm công */
 .check-in-btn,
 .check-out-btn {
-  background: #28a745;
+  background: #4caf50;
   color: white;
   padding: 10px 15px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .check-in-btn:hover,
 .check-out-btn:hover {
-  background: #218838;
+  background: #43a047;
+  transform: scale(1.02);
 }
 
 .checked-in-text {
   font-size: 18px;
-  color: #28a745;
+  color: #4caf50;
+  font-weight: 500;
   margin-top: 10px;
 }
 
 /* Bảng lịch sử chấm công */
 .attendance-table {
   width: 100%;
-  max-width: 800px;
-  margin: 20px auto;
   border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .attendance-table th,
 .attendance-table td {
-  border: 1px solid #ddd;
-  padding: 10px;
+  border: 1px solid #e0e0e0;
+  padding: 12px;
   text-align: center;
 }
 
 .attendance-table th {
-  background: #007bff;
+  background: #1e88e5;
   color: white;
 }
 
 .attendance-table tr:nth-child(even) {
-  background: #f2f2f2;
+  background: #f5f7fa;
 }
 
-/* 🌟 Admin Attendance Page */
-.admin-attendance-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to right, #e3f2fd, #bbdefb);
-  min-height: 100vh;
-}
-
-.admin-attendance-page h1 {
-  font-size: 28px;
-  font-weight: bold;
-  color: #222;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-
-/* 🔍 Ô tìm kiếm */
-.search-input {
-  width: 400px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-  margin-bottom: 15px;
-}
-
-/* 📅 Bảng danh sách chấm công */
-.attendance-table {
-  width: 90%;
-  border-collapse: collapse;
-  background: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.attendance-table th {
-  background: #007bff;
-  color: white;
-  padding: 12px;
-  text-align: left;
-  font-weight: bold;
-}
-
-.attendance-table td {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-  text-align: center;
-}
-
-/* 🔥 Trạng thái đi làm */
+/* Trạng thái đi làm */
 .status-cell {
-  font-weight: bold;
+  font-weight: 500;
   text-align: center;
   padding: 8px;
   border-radius: 5px;
@@ -145,35 +96,36 @@
 
 .status-green {
   color: white;
-  background-color: green;
+  background-color: #4caf50;
 }
 
 .status-yellow {
   color: black;
-  background-color: yellow;
+  background-color: #ffeb3b;
 }
 
 .status-red {
   color: white;
-  background-color: red;
+  background-color: #f44336;
 }
 
-/* ❌ Nút Xóa */
+/* Nút Xóa */
 .delete-btn {
-  background: #dc3545;
+  background: #f44336;
   color: white;
   padding: 8px 12px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .delete-btn:hover {
-  background: #c82333;
+  background: #e53935;
+  transform: scale(1.03);
 }
 
-/* 🛑 Nếu không có dữ liệu */
+/* Nếu không có dữ liệu */
 .no-attendance {
   text-align: center;
   font-style: italic;
@@ -182,13 +134,13 @@
 }
 
 .checked-in-text {
-  color: green;
-  font-weight: bold;
+  color: #4caf50;
+  font-weight: 500;
   margin-top: 10px;
 }
 
 .checked-out-text {
-  color: blue;
-  font-weight: bold;
+  color: #1e88e5;
+  font-weight: 500;
   margin-top: 10px;
 }
